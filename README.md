@@ -3,7 +3,7 @@
 ## Introduction
 
 This repository contains examples of how to use machine learning (ML) algorithms
-in the field of computational fluid dynamics (CFD). ML algorithms may be applied in different steps during a CFD simulation:
+in the field of computational fluid dynamics (CFD). ML algorithms may be applied in different steps during a CFD-based study:
 
 - **pre-processing**, e.g. for geometry or mesh generation
 - **run-time**, e.g. as a dynamic boundary condition or as a subgrid-scale model
@@ -17,7 +17,7 @@ Another possible categorization is to distingish the type of learning, e.g.
 
 ## How to reference
 
-If you found useful examples in this repository which helped you to write a scientific publication, you may consider citing one or more of the following references:
+If you found useful examples in this repository, you may consider citing the following reference:
 
 ```
 @article{doi:10.1002/ceat.201900044,
@@ -31,40 +31,28 @@ journal = {Chemical Engineering \& Technology},
 
 ### Supervised learning
 
-- **regression:** approximating the shape of a bubble
-  - 2D, steady, ellipsoidal
-  - 2D, steady, skirted
-  - 2D, steady, ellipsoidal, varying equivalent diameter
-  - 3D, unsteady, ellipsoidal
-  - 3D, unsteady, ellipsoidal, varying equivalent diameter
-- **regression:** approximating the transient rise velocity of a bubble
-  - single bubble
-  - varying equivalent diameter
-- **classification:** transition between various paths regimes of rising bubbles
-  - binary classification
-  - multi-class classification
-
 ### Unsupervised learning
 
-- **clustering:** finding small artefacts or particles in a Volume-of-Fluid simulation
-- **clustering:** counting the number of liquid drops in atomization
-
 ### Reinforcement learning
-
-- accelerating iterative solvers
 
 ## Other useful examples
 
 ## Journal articles realted to ML + CFD
 
+- [Super-resolution reconstruction of turbulent flows with machine learning (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/superresolution-reconstruction-of-turbulent-flows-with-machine-learning/0DEBFE07FD949054E7E5046AB5632F22)
 - [Data‐driven subgrid‐scale modeling for convection‐dominated concentration boundary layers (2019)](https://onlinelibrary.wiley.com/doi/abs/10.1002/ceat.201900044)
+- [Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/artificial-neural-networks-trained-through-deep-reinforcement-learning-discover-control-strategies-for-active-flow-control/D5B80D809DFFD73760989A07F5E11039), [GITHUB](https://github.com/jerabaul29/Cylinder2DFlowControlDRL)
 - [Turbulence Modeling in the Age of Data (2019)](https://www.annualreviews.org/doi/abs/10.1146/annurev-fluid-010518-040547)
 - [Deep learning in fluid dynamics (2017)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/deep-learning-in-fluid-dynamics/F2EDDAB89563DE5157FC4B8342AD9C70)
 
-## Contributors
+## More useful links
 
-- [Andre Weiner](https://github.com/AndreWeiner), [Mail](weiner@mma.tu-darmstadt.de)
+- Quora answer to [What are the hot topics in Fluid Dynamics involving Machine Learning?](https://www.quora.com/What-are-the-hot-topics-in-Fluid-Dynamics-involving-Machine-Learning/answer/Andre-Weiner-2)
 
 ## Other repositories with related content
 
 - [Computational-Fluid-Dynamics-Machine-Learning-Examples](https://github.com/loliverhennigh/Computational-Fluid-Dynamics-Machine-Learning-Examples)
+
+## Contributors
+
+- [Andre Weiner](https://github.com/AndreWeiner), [Mail](weiner@mma.tu-darmstadt.de)
