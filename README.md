@@ -39,6 +39,8 @@ journal = {Chemical Engineering \& Technology},
 
 ## Journal articles realted to ML + CFD
 
+- [Nonlinear mode decomposition with machine learning for fluid dynamics (2019)](https://www.researchgate.net/publication/333679109_Nonlinear_mode_decomposition_with_machine_learning_for_fluid_dynamics)
+- [Synthetic turbulent inflow generator using machine learning (2019)](https://www.researchgate.net/publication/333626382_Synthetic_turbulent_inflow_generator_using_machine_learning)
 - [Super-resolution reconstruction of turbulent flows with machine learning (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/superresolution-reconstruction-of-turbulent-flows-with-machine-learning/0DEBFE07FD949054E7E5046AB5632F22)
 - [Data‐driven subgrid‐scale modeling for convection‐dominated concentration boundary layers (2019)](https://onlinelibrary.wiley.com/doi/abs/10.1002/ceat.201900044)
 - [Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/artificial-neural-networks-trained-through-deep-reinforcement-learning-discover-control-strategies-for-active-flow-control/D5B80D809DFFD73760989A07F5E11039), [GITHUB](https://github.com/jerabaul29/Cylinder2DFlowControlDRL)
