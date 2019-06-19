@@ -10,34 +10,30 @@
     text height=0.333cm,
     execute at begin node=\color{black}$\vdots$
   },
+  sig/.style={path picture= {
+    \begin{scope}[x=1pt,y=10pt]
+      \draw plot[domain=-6:6] (\x,{1/(1 + exp(-\x))-0.5});
+    \end{scope}
+    }
+  }
 }
 
-\foreach \m/\l [count=\y] in {1,2,3,missing,4}
-  \node [every neuron/.try, neuron \m/.try] (input-\m) at (0,2.5-\y) {};
+\node [every neuron/.try, neuron 1/.try] (input-1) at (0,2.5-1) {$x_1$};
+\node [every neuron/.try, neuron 2/.try] (input-2) at (0,2.5-2) {$x_2$};
+\node [every neuron/.try, neuron 3/.try] (input-3) at (0,2.5-3) {$1$};
 
-\foreach \m [count=\y] in {1,missing,2}
-  \node [every neuron/.try, neuron \m/.try ] (hidden-\m) at (2,2-\y*1.25) {};
+\node [every neuron/.try, neuron 1/.try, sig ] (hidden-1) at (2,2.5-1) {};
+\node [every neuron/.try, neuron 2/.try, sig ] (hidden-2) at (2,2.5-2) {};
+\node [every neuron/.try, neuron 3/.try] (hidden-3) at (2,2.5-3) {$1$};
 
-\foreach \m [count=\y] in {1,missing,2}
-  \node [every neuron/.try, neuron \m/.try ] (output-\m) at (4,1.5-\y) {};
+\node [every neuron/.try, neuron 1/.try, sig ] (output-1) at (4,1.5-1) {};
 
-\foreach \l [count=\i] in {1,2,3,n}
-  \draw [<-] (input-\i) -- ++(-1,0)
-    node [above, midway] {$I_\l$};
-
-\foreach \l [count=\i] in {1,n}
-  \node [above] at (hidden-\i.north) {$H_\l$};
-
-\foreach \l [count=\i] in {1,n}
-  \draw [->] (output-\i) -- ++(1,0)
-    node [above, midway] {$O_\l$};
-
-\foreach \i in {1,...,4}
-  \foreach \j in {1,...,2}
+\foreach \i in {1,2,3}
+  \foreach \j in {1,2}
     \draw [->] (input-\i) -- (hidden-\j);
 
-\foreach \i in {1,...,2}
-  \foreach \j in {1,...,2}
+\foreach \i in {1,2,3}
+  \foreach \j in {1}
     \draw [->] (hidden-\i) -- (output-\j);
 
 \foreach \l [count=\x from 0] in {Input, Hidden, Ouput}
