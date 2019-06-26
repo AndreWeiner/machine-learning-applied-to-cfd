@@ -5,15 +5,60 @@
 This repository contains examples of how to use machine learning (ML) algorithms
 in the field of computational fluid dynamics (CFD). ML algorithms may be applied in different steps during a CFD-based study:
 
-- **pre-processing**, e.g. for geometry or mesh generation
-- **run-time**, e.g. as a dynamic boundary condition or as a subgrid-scale model
-- **post-processing**, e.g. to create substitute models or to analyze results
+- **pre-processing**, e.g., for geometry or mesh generation
+- **run-time**, e.g., as a dynamic boundary condition or as a subgrid-scale model
+- **post-processing**, e.g., to create substitute models or to analyze results
 
-Another possible categorization is to distingish the type of learning, e.g.
+Another possible categorization is to distinguish the type of learning, e.g.
 
-- **supervised learning:** the algorithm creates a mapping between given features and labels, e.g. between the shape of a truck and the drag force acting on it
-- **unsupervised learning:** the algorithm finds labels in the data, e.g. if two particles *p1* and *p2* are represented by some points on their surface (there is only a list of points but it is not known to which particle they belong), the algorithm will figure out for each point weather is belongs to *p1* or *p2*
-- **reinforcement learning:** an agent acting in an environment tries to maximize a (cumulative) reward, e.g. an agent setting the solution control of a simulation tries to finish the simulation as quickly as possible, thereby learning to find optimized solution controls for a given set-up (*agent*: some program modifying the solver settings; *environment*: the solver reacting on the changes in the settings; *reward*: the inverse of the time required to complete one iteration)
+- **supervised learning:** the algorithm creates a mapping between given features and labels, e.g., between the shape of a truck and the drag force acting on it
+- **unsupervised learning:** the algorithm finds labels in the data, e.g., if two particles *p1* and *p2* are represented by some points on their surface (there is only a list of points, but it is not known to which particle they belong), the algorithm will figure out for each point weather it belongs to *p1* or *p2*
+- **reinforcement learning:** an agent acting in an environment tries to maximize a (cumulative) reward, e.g., an agent setting the solution control of a simulation tries to finish the simulation as quickly as possible, thereby learning to find optimized solution controls for a given set-up (*agent*: some program modifying the solver settings; *environment*: the solver reacting on the changes in the settings; *reward*: the inverse of the time required to complete one iteration)
+
+## Dependencies
+
+Currently, the following packages are required
+
+- Anaconda, Python 3.x version ([Link](https://www.anaconda.com/distribution/#download-section))
+- NumPy v1.16, Pandas v0.24.2, Matplotlib v2.2.2, PyTorch v1.0.0, Scikit-Learn 0.19.1 or later versions
+
+To install all packages using PIP, run
+
+```
+pip3 install numpy matplotlib pandas scikit-learn
+```
+
+or using the conda installer, run
+```
+conda install numpy matplotlib pandas scikit-learn
+```
+
+For PyTorch, it is best to use the [graphical selection tool](https://pytorch.org/). Example install commands might be
+```
+# using pip
+pip3 install torch torchvision
+# using conda
+conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
+```
+for systems with Cuda support, or
+```
+# using pip
+pip3 install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
+pip3 install https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp36-cp36m-linux_x86_64.whl
+# using conda
+conda install pytorch-cpu torchvision-cpu -c pytorch
+```
+for systems without GPU acceleration.
+
+## Examples grouped by the type of learning
+
+### Supervised learning
+
+- **classification**: [path regime classification of rising bubbles](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/path_regime_classification.ipynb)
+
+### Unsupervised learning
+
+### Reinforcement learning
 
 ## How to reference
 
@@ -26,16 +71,6 @@ title = {Data-driven subgrid-scale modeling for convection-dominated concentrati
 journal = {Chemical Engineering \& Technology},
 }
 ```
-
-## Examples grouped by the type of learning
-
-### Supervised learning
-
-### Unsupervised learning
-
-### Reinforcement learning
-
-## Other useful examples
 
 ## Journal articles realted to ML + CFD
 
