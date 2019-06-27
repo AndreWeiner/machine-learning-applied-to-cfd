@@ -9,6 +9,7 @@ in the field of computational fluid dynamics (CFD). ML algorithms may be applied
 - **run-time**, e.g., as a dynamic boundary condition or as a subgrid-scale model
 - **post-processing**, e.g., to create substitute models or to analyze results
 
+**Why this categorization? Do you use something different than supervised learning? Wouldn't it be better to introduce classification/regression?**
 Another possible categorization is to distinguish the type of learning, e.g.
 
 - **supervised learning:** the algorithm creates a mapping between given features and labels, e.g., between the shape of a truck and the drag force acting on it
@@ -16,6 +17,8 @@ Another possible categorization is to distinguish the type of learning, e.g.
 - **reinforcement learning:** an agent acting in an environment tries to maximize a (cumulative) reward, e.g., an agent setting the solution control of a simulation tries to finish the simulation as quickly as possible, thereby learning to find optimized solution controls for a given set-up (*agent*: some program modifying the solver settings; *environment*: the solver reacting on the changes in the settings; *reward*: the inverse of the time required to complete one iteration)
 
 ## Dependencies
+
+**I had to install qutip. Don't know if this is included in a latest version of the listed packages**
 
 Currently, the following packages are required
 
