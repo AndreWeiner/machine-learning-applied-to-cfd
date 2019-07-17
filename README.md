@@ -5,13 +5,14 @@
 1. [Introduction](#introduction)
 2. [Dependencies](#dependencies)
     1. [Dependencies for Jupyter notebooks](#dependencies_jupyter)
-    1. [Running notebooks locally](#run_locally)
-    1. [Running notebooks with Colaboratory](#run_colab)
-    1. [Dependencies for OpenFOAM cases and apps](#dependencies_openfoam)
+    2. [Running notebooks locally](#run_locally)
+    3. [Running notebooks with Colaboratory](#run_colab)
+    4. [Dependencies for OpenFOAM cases and apps](#dependencies_openfoam)
 3. [Examples grouped by the type of learning](#examples)
     1. [Supervised learning](#supervised_learning)
-    1. [Unsupervised learning](#unsupervised_learning)
-    1. [Reinforcement learning](#reinforcement_learning)
+    2. [Unsupervised learning](#unsupervised_learning)
+    3. [Reinforcement learning](#reinforcement_learning)
+    4. [Application to CFD](#application_to_cfd)
 4. [How to reference](#how_to_reference)
 5. [Journal articles related to ML + CFD](#journal_articles)
 6. [More useful links](#useful_links)
@@ -81,7 +82,7 @@ for systems without GPU acceleration.
 
 ### Running notebooks with Colaboratory<a id="run_colab"></a>
 
-Running notebooks in colab requires to have a Google account (the same account as for Gmail, Google Drive, and so on). Note, that it is also possible to display the notebooks with having an account (without interactivity). After logging in to colab, notebooks can be directly imported from Github (from this repository):
+Running notebooks in colab requires to have a Google account (the same account as for Gmail, Google Drive, etc.). Note, that it is also possible to display the notebooks without having an account (but without interactivity). After logging in to colab, notebooks can be directly imported from Github (from this repository):
 
 - File -> Open notebook...
 - Select the *GITHUB* tab
@@ -89,7 +90,7 @@ Running notebooks in colab requires to have a Google account (the same account a
 - Select the notebook you want to import
 - Click on **COPY TO DRIVE**
 
-Without the last step, you will still be able to run and modify most of the cells in the notebooks, but you will not be able to run cells which store intermediate results, e.g. model weights. The import windows should look similar to the following:
+Without the last step, you will still be able to run and modify most of the cells in the notebooks, but you will not be able to run cells which store intermediate results, e.g., model weights. The import windows should look similar to the following:
 
 <img src="colab_import_from_github.png" alt="drawing" width="800"/>
 
@@ -114,10 +115,18 @@ To compile or run applications, execute the scripts provided in the respective f
 ### Supervised learning<a id="supervised_learning"></a>
 
 - **classification**: [path regime classification of rising bubbles](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/path_regime_classification.ipynb)
+- **regression**: [2D shape approximation](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/2D_shape_approximation.ipynb)
+- **regression**: [instantaneous 3D shape approximation](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/3D_shape_approximation.ipynb)
 
 ### Unsupervised learning<a id="unsupervised_learning"></a>
 
+- **outlier detection**: [Removing volume fragments from VOF simulations](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/fragment_removel.ipynb)
+
 ### Reinforcement learning<a id="reinforcement_learning"></a>
+
+### Application to CFD<a id="application_to_cfd"></a>
+
+- [Mesh motion with moving boundary](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/tree/master/OpenFOAM/cases/moving_boundary)
 
 ## How to reference<a id="how_to_reference"></a>
 
