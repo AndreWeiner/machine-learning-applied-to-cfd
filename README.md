@@ -1,6 +1,24 @@
 # machine-learning-applied-to-cfd
 
-## Introduction
+## Outline
+
+1. [Introduction](#introduction)
+2. [Dependencies](#dependencies)
+    1. [Dependencies for Jupyter notebooks](#dependencies_jupyter)
+    1. [Running notebooks locally](#run_locally)
+    1. [Running notebooks with Colaboratory](#run_colab)
+    1. [Dependencies for OpenFOAM cases and apps](#dependencies_openfoam)
+3. [Examples grouped by the type of learning](#examples)
+    1. [Supervised learning](#supervised_learning)
+    1. [Unsupervised learning](#unsupervised_learning)
+    1. [Reinforcement learning](#reinforcement_learning)
+4. [How to reference](#how_to_reference)
+5. [Journal articles related to ML + CFD](#journal_articles)
+6. [More useful links](#useful_links)
+7. [Other repositories with related content](#related_repositories)
+8. [Contributors](#contributers)
+
+## Introduction<a id="introduction"></a>
 
 This repository contains examples of how to use machine learning (ML) algorithms
 in the field of computational fluid dynamics (CFD). ML algorithms may be applied in different steps during a CFD-based study:
@@ -15,18 +33,18 @@ Another possible categorization is to distinguish the type of machine learning a
 - **unsupervised learning:** the algorithm finds labels in the data, e.g., if two particles *p1* and *p2* are represented by some points on their surface (there is only a list of points, but it is not known to which particle they belong), the algorithm will figure out for each point weather it belongs to *p1* or *p2*
 - **reinforcement learning:** an agent acting in an environment tries to maximize a (cumulative) reward, e.g., an agent setting the solution control of a simulation tries to finish the simulation as quickly as possible, thereby learning to find optimized solution controls for a given set-up (*agent*: some program modifying the solver settings; *environment*: the solver reacting on the changes in the settings; *reward*: the inverse of the time required to complete one iteration)
 
-## Dependencies
+## Dependencies<a id="dependencies"></a>
 
-### Dependencies for Jupyter notebooks
+### Dependencies for Jupyter notebooks<a id="dependencies_jupyter"></a>
 
 Currently, there are two supported ways to execute the Jupyter notebooks contained in the *notebooks* folder:
 
 1. via a local installation of [Anaconda](https://www.anaconda.com/distribution/)
 2. via [Google Colab](https://colab.research.google.com/) (cloud-based)
 
-Both approaches allow to the notebooks interactively and to save results.
+Both approaches allow to run the notebooks interactively and to save results.
 
-### Running notebooks locally
+### Running notebooks locally<a id="run_locally"></a>
 
 The notebooks use the following Python packages, which can all be installed via pip or conda:
 
@@ -61,7 +79,7 @@ conda install pytorch-cpu torchvision-cpu -c pytorch
 ```
 for systems without GPU acceleration.
 
-### Running notebooks with Colaboratory
+### Running notebooks with Colaboratory<a id="run_colab"></a>
 
 Running notebooks in colab requires to have a Google account (the same account as for Gmail, Google Drive, and so on). Note, that it is also possible to display the notebooks with having an account (without interactivity). After logging in to colab, notebooks can be directly imported from Github (from this repository):
 
@@ -73,9 +91,9 @@ Running notebooks in colab requires to have a Google account (the same account a
 
 Without the last step, you will still be able to run and modify most of the cells in the notebooks, but you will not be able to run cells which store intermediate results, e.g. model weights. The import windows should look similar to the following:
 
-<img src="colab_import_from_github.png" alt="drawing" width="600"/>
+<img src="colab_import_from_github.png" alt="drawing" width="800"/>
 
-### Dependencies for OpenFOAM cases and apps
+### Dependencies for OpenFOAM cases and apps<a id="dependencies_openfoam"></a>
 
 Running and compiling OpenFOAM+PyTorch applications is enabled via a special [Docker](https://www.docker.com/) image. The Dockerfile to build the image is also available on [Github](https://github.com/AndreWeiner/of_pytorch_docker). First, install the latest version of Docker ([Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)). The image is hosted on [Dockerhub](https://cloud.docker.com/u/andreweiner/repository/docker/andreweiner/of_pytorch) and can be downloaded by running
 
@@ -91,19 +109,19 @@ cd OpenFOAM
 ```
 To compile or run applications, execute the scripts provided in the respective folders **from within the container**.
 
-## Examples grouped by the type of learning
+## Examples grouped by the type of learning<a id="examples"></a>
 
-### Supervised learning
+### Supervised learning<a id="supervised_learning"></a>
 
 - **classification**: [path regime classification of rising bubbles](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/path_regime_classification.ipynb)
 
-### Unsupervised learning
+### Unsupervised learning<a id="unsupervised_learning"></a>
 
-### Reinforcement learning
+### Reinforcement learning<a id="reinforcement_learning"></a>
 
-## How to reference
+## How to reference<a id="how_to_reference"></a>
 
-If you found useful examples in this repository, you may consider citing the following reference:
+If you found useful examples in this repository, you may consider referring to the following article:
 
 ```
 @article{doi:10.1002/ceat.201900044,
@@ -113,7 +131,7 @@ journal = {Chemical Engineering \& Technology},
 }
 ```
 
-## Journal articles realted to ML + CFD
+## Journal articles realted to ML + CFD<a id="journal_articles"></a>
 
 - [Nonlinear mode decomposition with machine learning for fluid dynamics (2019)](https://www.researchgate.net/publication/333679109_Nonlinear_mode_decomposition_with_machine_learning_for_fluid_dynamics)
 - [Synthetic turbulent inflow generator using machine learning (2019)](https://www.researchgate.net/publication/333626382_Synthetic_turbulent_inflow_generator_using_machine_learning)
@@ -123,14 +141,14 @@ journal = {Chemical Engineering \& Technology},
 - [Turbulence Modeling in the Age of Data (2019)](https://www.annualreviews.org/doi/abs/10.1146/annurev-fluid-010518-040547)
 - [Deep learning in fluid dynamics (2017)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/deep-learning-in-fluid-dynamics/F2EDDAB89563DE5157FC4B8342AD9C70)
 
-## More useful links
+## More useful links<a id="useful_links"></a>
 
 - Quora answer to [What are the hot topics in Fluid Dynamics involving Machine Learning?](https://www.quora.com/What-are-the-hot-topics-in-Fluid-Dynamics-involving-Machine-Learning/answer/Andre-Weiner-2)
 
-## Other repositories with related content
+## Other repositories with related content<a id="related_repositories"></a>
 
 - [Computational-Fluid-Dynamics-Machine-Learning-Examples](https://github.com/loliverhennigh/Computational-Fluid-Dynamics-Machine-Learning-Examples)
 
-## Contributors
+## Contributors<a id="contributers"></a>
 
 - [Andre Weiner](https://github.com/AndreWeiner), [Mail](weiner@mma.tu-darmstadt.de)
