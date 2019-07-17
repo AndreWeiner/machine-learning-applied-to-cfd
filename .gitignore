@@ -2,3 +2,5 @@
 .*swp
 *.pt
 *.so
+linux64GccDPInt32Opt
+lnInclude

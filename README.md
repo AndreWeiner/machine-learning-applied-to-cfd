@@ -17,12 +17,23 @@ Another possible categorization is to distinguish the type of machine learning a
 
 ## Dependencies
 
-Currently, the following packages are required
+### Dependencies for Jupyter notebooks
+
+Currently, there are two supported ways to execute the Jupyter notebooks contained in the *notebooks* folder:
+
+1. via a local installation of [Anaconda](https://www.anaconda.com/distribution/)
+2. via [Google Colab](https://colab.research.google.com/) (cloud-based)
+
+Both approaches allow to the notebooks interactively and to save results.
+
+### Running notebooks locally
+
+The notebooks use the following Python packages, which can all be installed via pip or conda:
 
 - Anaconda, Python 3.x version ([Link](https://www.anaconda.com/distribution/#download-section))
 - NumPy v1.16, Pandas v0.24.2, Matplotlib v2.2.2, PyTorch v1.0.0, Scikit-Learn 0.19.1 or later versions
 
-To install all packages using PIP, run
+To install all packages using pip, run
 
 ```
 pip3 install numpy matplotlib pandas scikit-learn
@@ -49,6 +60,36 @@ pip3 install https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp36-cp36m-l
 conda install pytorch-cpu torchvision-cpu -c pytorch
 ```
 for systems without GPU acceleration.
+
+### Running notebooks with Colaboratory
+
+Running notebooks in colab requires to have a Google account (the same account as for Gmail, Google Drive, and so on). Note, that it is also possible to display the notebooks with having an account (without interactivity). After logging in to colab, notebooks can be directly imported from Github (from this repository):
+
+- File -> Open notebook...
+- Select the *GITHUB* tab
+- Search for *AndreWeiner*
+- Select the notebook you want to import
+- Click on **COPY TO DRIVE**
+
+Without the last step, you will still be able to run and modify most of the cells in the notebooks, but you will not be able to run cells which store intermediate results, e.g. model weights. The import windows should look similar to the following:
+
+<img src="colab_import_from_github.png" alt="drawing" width="600"/>
+
+### Dependencies for OpenFOAM cases and apps
+
+Running and compiling OpenFOAM+PyTorch applications is enabled via a special [Docker](https://www.docker.com/) image. The Dockerfile to build the image is also available on [Github](https://github.com/AndreWeiner/of_pytorch_docker). First, install the latest version of Docker ([Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)). The image is hosted on [Dockerhub](https://cloud.docker.com/u/andreweiner/repository/docker/andreweiner/of_pytorch) and can be downloaded by running
+
+```
+docker pull andreweiner/of_pytorch:of1906-py1.1-cpu
+```
+
+Currently, there is only a version with cpu support. To create and run a new container, go to the OpenFOAM folder and execute the *runContainer.sh* script:
+
+```
+cd OpenFOAM
+./runContainer.sh
+```
+To compile or run applications, execute the scripts provided in the respective folders **from within the container**.
 
 ## Examples grouped by the type of learning
 
