@@ -1,6 +1,7 @@
 '''Module containing function that are too large to be included in the notebooks.'''
 
 import torch
+import numpy as np
 
 class SimpleMLP(torch.nn.Module):
     def __init__(self, n_inputs=1, n_outputs=1, n_layers=1, n_neurons=10, activation=torch.sigmoid, batch_norm=False):
@@ -53,7 +54,7 @@ class SimpleMLP(torch.nn.Module):
 
 
 def approximate_function(x_train, y_train, x_val, y_val, model, l_rate=0.001, batch_size=128,
-                         max_iter=1000, path=None, verbose=100):
+                         max_iter=1000, path=None, device='cpu', verbose=100):
     '''Train MLP to approximate a function y(x).
        The training stops when the maximum number of training epochs is reached.
 
@@ -68,6 +69,7 @@ def approximate_function(x_train, y_train, x_val, y_val, model, l_rate=0.001, ba
     batch_size - Integer : batch size for training data
     max_iter - Integer   : maximum number of allowed training epochs
     path - String        : location to save model weights
+    device - String      : either cpu or gpu
     verbose - Integer    : defines frequency for loss information output
 
     Returns
