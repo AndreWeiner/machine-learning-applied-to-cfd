@@ -8,7 +8,7 @@
     2. [Running notebooks locally](#run_locally)
     3. [Running notebooks with Colaboratory](#run_colab)
     4. [Dependencies for OpenFOAM cases and apps](#dependencies_openfoam)
-3. [Examples grouped by the type of learning](#examples)
+3. [Examples](#examples)
     1. [Supervised learning](#supervised_learning)
     2. [Unsupervised learning](#unsupervised_learning)
     3. [Reinforcement learning](#reinforcement_learning)
@@ -31,7 +31,7 @@ in the field of computational fluid dynamics (CFD). ML algorithms may be applied
 Another possible categorization is to distinguish the type of machine learning algorithm, e.g.
 
 - **supervised learning:** the algorithm creates a mapping between given features and labels, e.g., between the shape of a truck and the drag force acting on it
-- **unsupervised learning:** the algorithm finds labels in the data, e.g., if two particles *p1* and *p2* are represented by some points on their surface (there is only a list of points, but it is not known to which particle they belong), the algorithm will figure out for each point weather it belongs to *p1* or *p2*
+- **unsupervised learning:** the algorithm finds labels in the data, e.g., if two particles *p1* and *p2* are represented by some points on their surface (there is only a list of points, but it is not known to which particle they belong), the algorithm will figure out for each point whether it belongs to *p1* or *p2*
 - **reinforcement learning:** an agent acting in an environment tries to maximize a (cumulative) reward, e.g., an agent setting the solution control of a simulation tries to finish the simulation as quickly as possible, thereby learning to find optimized solution controls for a given set-up (*agent*: some program modifying the solver settings; *environment*: the solver reacting on the changes in the settings; *reward*: the inverse of the time required to complete one iteration)
 
 ## Dependencies<a id="dependencies"></a>
@@ -110,7 +110,7 @@ cd OpenFOAM
 ```
 To compile or run applications, execute the scripts provided in the respective folders **from within the container**.
 
-## Examples grouped by the type of learning<a id="examples"></a>
+## Examples<a id="examples"></a>
 
 ### Supervised learning<a id="supervised_learning"></a>
 
