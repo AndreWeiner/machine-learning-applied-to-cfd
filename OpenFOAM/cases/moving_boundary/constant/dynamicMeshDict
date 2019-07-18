@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v1812                                 |
+|  \\    /   O peration     | Version:  v1906                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -11,39 +11,20 @@ FoamFile
     format      ascii;
     class       dictionary;
     location    "system";
-    object      fvSchemes;
+    object      dynamicMeshDict;
 }
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-ddtSchemes
-{
-    default         Euler;
-}
+dynamicFvMesh dynamicMotionSolverFvMesh;
 
-gradSchemes
-{
-    default         Gauss linear;
-}
+motionSolverLibs ("libfvMotionSolvers.so");
 
-divSchemes
-{
-    default         Gaus linear;
-}
+//motionSolver displacementSBRStress;
+motionSolver displacementLaplacian;
 
-laplacianSchemes
-{
-    default         Gauss linear corrected;
-}
-
-interpolationSchemes
-{
-    default         linear;
-}
-
-snGradSchemes
-{
-    default         corrected;
-}
-
+//diffusivity uniform 0.001;
+diffusivity  quadratic inverseDistance 1(wall);
+//diffusivity  exponential 0.001 inverseDistance 1(wall);
 
 // ************************************************************************* //

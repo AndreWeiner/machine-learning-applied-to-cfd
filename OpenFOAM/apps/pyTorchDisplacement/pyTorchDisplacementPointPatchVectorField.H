@@ -37,7 +37,10 @@ SourceFiles
 #ifndef pyTorchDisplacementPointPatchVectorField_H
 #define pyTorchDisplacementPointPatchVectorField_H
 
+#include <torch/script.h>
 #include "fixedValuePointPatchField.H"
+#include "mathematicalConstants.H"
+#include <cmath>
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -54,8 +57,9 @@ class pyTorchDisplacementPointPatchVectorField
 {
     // Private data
 
-        vector amplitude_;
-        scalar omega_;
+        vector center_;
+        word model_name_;
+        std::shared_ptr<torch::jit::script::Module> pyTorch_model_;
 
 
 public:

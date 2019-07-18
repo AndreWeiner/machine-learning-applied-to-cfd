@@ -46,8 +46,8 @@ pyTorchDisplacementPointPatchVectorField
 )
 :
     fixedValuePointPatchField<vector>(p, iF),
-    amplitude_(Zero),
-    omega_(0.0)
+    center_(Zero),
+    model_name_("shape_model.pt")
 {}
 
 
@@ -60,9 +60,11 @@ pyTorchDisplacementPointPatchVectorField
 )
 :
     fixedValuePointPatchField<vector>(p, iF, dict),
-    amplitude_(dict.lookup("amplitude")),
-    omega_(dict.get<scalar>("omega"))
+    center_(dict.lookup("center")),
+    model_name_(dict.lookupOrDefault<word>("model", "shape_model.pt"))
 {
+    pyTorch_model_ = torch::jit::load(model_name_);
+    assert(pyTorch_model_ != nullptr);
     if (!dict.found("value"))
     {
         updateCoeffs();
@@ -80,8 +82,9 @@ pyTorchDisplacementPointPatchVectorField
 )
 :
     fixedValuePointPatchField<vector>(ptf, p, iF, mapper),
-    amplitude_(ptf.amplitude_),
-    omega_(ptf.omega_)
+    center_(ptf.center_),
+    model_name_(ptf.model_name_),
+    pyTorch_model_(ptf.pyTorch_model_)
 {}
 
 
@@ -93,8 +96,9 @@ pyTorchDisplacementPointPatchVectorField
 )
 :
     fixedValuePointPatchField<vector>(ptf, iF),
-    amplitude_(ptf.amplitude_),
-    omega_(ptf.omega_)
+    center_(ptf.center_),
+    model_name_(ptf.model_name_),
+    pyTorch_model_(ptf.pyTorch_model_)
 {}
 
 
@@ -109,8 +113,36 @@ void pyTorchDisplacementPointPatchVectorField::updateCoeffs()
 
     const polyMesh& mesh = this->internalField().mesh()();
     const Time& t = mesh.time();
+    const pointField& localPoints = patch().localPoints();
+    torch::Tensor featureTensor = torch::ones({localPoints.size(), 3});
 
-    Field<vector>::operator=(amplitude_*sin(omega_*t.value()));
+    forAll(localPoints, i)
+    {
+        scalar pi = constant::mathematical::pi;
+        vector x = localPoints[i] - center_;
+        scalar r = sqrt(x & x);
+        scalar phi = acos(x.y() / r);
+        scalar theta = std::fmod((atan2(x.x(), x.z()) + pi), pi);
+        if (x.x() < 0.0)
+        {
+            phi = 2.0 * pi - phi;
+        }
+        featureTensor[i][0] = phi;
+        featureTensor[i][1] = theta;
+        featureTensor[i][2] = t.value();
+    }
+
+    std::vector<torch::jit::IValue> modelFeatures{featureTensor};
+    torch::Tensor radTensor = pyTorch_model_->forward(modelFeatures).toTensor();
+    auto radAccessor = radTensor.accessor<float,1>();
+    vectorField result(localPoints.size(), Zero);
+    forAll(result, i)
+    {
+        vector x = localPoints[i] - center_;
+        result[i] = x / mag(x) * radAccessor[i];
+    }
+
+    Field<vector>::operator=(result);
 
     fixedValuePointPatchField<vector>::updateCoeffs();
 }
@@ -119,8 +151,8 @@ void pyTorchDisplacementPointPatchVectorField::updateCoeffs()
 void pyTorchDisplacementPointPatchVectorField::write(Ostream& os) const
 {
     pointPatchField<vector>::write(os);
-    os.writeEntry("amplitude", amplitude_);
-    os.writeEntry("omega", omega_);
+    os.writeEntry("center", center_);
+    os.writeEntry("model_name", model_name_);
     writeEntry("value", os);
 }
 

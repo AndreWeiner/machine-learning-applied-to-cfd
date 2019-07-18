@@ -1,2 +1,2 @@
 pyTorchDisplacementPointPatchVectorField.C
-LIB = lib/libfvMotionSolvers
+LIB = $(FOAM_USER_LIBBIN)/libPyTorchMotion
