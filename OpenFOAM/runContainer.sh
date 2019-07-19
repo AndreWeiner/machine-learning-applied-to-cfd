@@ -1,5 +1,5 @@
 docker container run                                      \
-  -it -v=$PWD:/home                                       \
+  -it -v="$PWD":/home                                     \
   --workdir=/home                                         \
   --user=$(id -u)                                         \
   -e USER=$USER                                           \
