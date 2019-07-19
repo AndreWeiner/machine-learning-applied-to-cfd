@@ -20,7 +20,7 @@ solvers
     "cellDisplacement.*"
     {
         solver          GAMG;
-        tolerance       1e-8;
+        tolerance       1e-14;
         relTol          0;
         smoother        GaussSeidel;
     }

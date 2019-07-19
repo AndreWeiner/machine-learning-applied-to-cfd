@@ -20,10 +20,10 @@ dynamicFvMesh dynamicMotionSolverFvMesh;
 
 motionSolverLibs ("libfvMotionSolvers.so");
 
-//motionSolver displacementSBRStress;
-motionSolver displacementLaplacian;
+motionSolver displacementSBRStress;
+//motionSolver displacementLaplacian;
 
-//diffusivity uniform 0.001;
+//diffusivity uniform 1.0;
 diffusivity  quadratic inverseDistance 1(wall);
 //diffusivity  exponential 0.001 inverseDistance 1(wall);
 

@@ -139,8 +139,9 @@ void pyTorchDisplacementPointPatchVectorField::updateCoeffs()
     forAll(result, i)
     {
         vector x = localPoints[i] - center_;
-        result[i] = x / mag(x) * radAccessor[i];
+        result[i] = x / mag(x) * (radAccessor[i] - mag(x));
     }
+
 
     Field<vector>::operator=(result);
 

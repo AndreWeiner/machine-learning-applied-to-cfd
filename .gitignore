@@ -5,4 +5,5 @@
 linux64GccDPInt32Opt
 lnInclude
 __pycache__
+andre
 !/OpenFOAM/**/*.pt
