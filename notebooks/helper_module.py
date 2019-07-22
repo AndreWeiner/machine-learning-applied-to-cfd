@@ -132,6 +132,8 @@ def approximate_function(x_train, y_train, x_val, y_val, model, l_rate=0.001, ba
                 print("Validation loss/max. dev.: {}/{}".format(loss_val.item(), max_diff_val))
                 print("--------------------------------")
             if path is not None:
-                if count % verbose == 0: print("Saving model as {}".format(path))
+                if count % verbose == 0:
+                    print("Saving model as {}".format(path))
+                    print("--------------------------------")
                 torch.save(model.state_dict(), path)
     return model.eval(), np.asarray(history_train), np.asarray(history_val)
