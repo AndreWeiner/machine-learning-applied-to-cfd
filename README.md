@@ -116,7 +116,7 @@ To compile or run applications, execute the scripts provided in the respective f
 
 - **classification**: [path regime classification of rising bubbles](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/path_regime_classification.ipynb)
 - **regression**: [2D shape approximation](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/2D_shape_approximation.ipynb)
-- **regression**: [instantaneous 3D shape approximation](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/3D_shape_approximation.ipynb)
+- **regression**: [instantaneous 3D shape approximation](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/notebooks/4D_shape_approximation.ipynb)
 
 ### Unsupervised learning<a id="unsupervised_learning"></a>
 
