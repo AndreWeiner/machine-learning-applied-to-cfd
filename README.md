@@ -14,10 +14,9 @@
     3. [Reinforcement learning](#reinforcement_learning)
     4. [Application to CFD](#application_to_cfd)
 4. [How to reference](#how_to_reference)
-5. [Journal articles related to ML + CFD](#journal_articles)
-6. [More useful links](#useful_links)
-7. [Other repositories with related content](#related_repositories)
-8. [Contributors](#contributers)
+5. [Useful links](#useful_links)
+6. [Other repositories with related content](#related_repositories)
+7. [Contributors](#contributers)
 
 ## Introduction<a id="introduction"></a>
 
@@ -140,23 +139,21 @@ journal = {Chemical Engineering \& Technology},
 }
 ```
 
-## Journal articles realted to ML + CFD<a id="journal_articles"></a>
+## Useful links<a id="useful_links"></a>
 
-- [Nonlinear mode decomposition with machine learning for fluid dynamics (2019)](https://www.researchgate.net/publication/333679109_Nonlinear_mode_decomposition_with_machine_learning_for_fluid_dynamics)
-- [Synthetic turbulent inflow generator using machine learning (2019)](https://www.researchgate.net/publication/333626382_Synthetic_turbulent_inflow_generator_using_machine_learning)
-- [Super-resolution reconstruction of turbulent flows with machine learning (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/superresolution-reconstruction-of-turbulent-flows-with-machine-learning/0DEBFE07FD949054E7E5046AB5632F22)
-- [Data‐driven subgrid‐scale modeling for convection‐dominated concentration boundary layers (2019)](https://onlinelibrary.wiley.com/doi/abs/10.1002/ceat.201900044)
-- [Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/artificial-neural-networks-trained-through-deep-reinforcement-learning-discover-control-strategies-for-active-flow-control/D5B80D809DFFD73760989A07F5E11039), [GITHUB](https://github.com/jerabaul29/Cylinder2DFlowControlDRL)
-- [Turbulence Modeling in the Age of Data (2019)](https://www.annualreviews.org/doi/abs/10.1146/annurev-fluid-010518-040547)
-- [Deep learning in fluid dynamics (2017)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/deep-learning-in-fluid-dynamics/F2EDDAB89563DE5157FC4B8342AD9C70)
-
-## More useful links<a id="useful_links"></a>
-
+- An overview of articles related to ML + CFD can be found [here](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/literature.md).
 - Quora answer to [What are the hot topics in Fluid Dynamics involving Machine Learning?](https://www.quora.com/What-are-the-hot-topics-in-Fluid-Dynamics-involving-Machine-Learning/answer/Andre-Weiner-2)
 
 ## Other repositories with related content<a id="related_repositories"></a>
 
 - [Computational-Fluid-Dynamics-Machine-Learning-Examples](https://github.com/loliverhennigh/Computational-Fluid-Dynamics-Machine-Learning-Examples)
+- [pyTorch](https://github.com/pytorch/pytorch)
+- [Physics Informed Neural Networks (PINNs)](https://github.com/maziarraissi/PINNs)
+- [Deep Hidden Physics Models](https://github.com/maziarraissi/PINNs)
+- [DeepXDE](https://github.com/lululxvi/deepxde)
+- [A Suite of Computationally Expensive Shape Optimisation Problems Using CFD](https://bitbucket.org/arahat/cfd-test-problem-suite/src/master/)
+- [Cylinder2DFlowControlDRL](https://github.com/jerabaul29/Cylinder2DFlowControlDRL)
+- [fenics-DRL](https://github.com/DonsetPG/fenics-DRL)
 
 ## Contributors<a id="contributers"></a>
 
