@@ -1,24 +1,44 @@
 # Articles related to ML + CFD
 
+## Outline
+
+1. [Introduction](#introduction)
+2. [Abbreviations](#abbreviations)
+3. [Articles](#articles)
+
+## Introduction<a id="introduction"></a>
+
 The following list comprises articles related to computational fluid dynamics (CFD) and machine learning (ML). Some of the articles consider only heat and mass transfer or the solution of partial differential equations which are not strictly speaking *fluid dynamics*. There are also works where initial/boundary value problems are solved directly using machine learning without classical numerical techniques. Such articles are also listed here because they may contain techniques which help to improve data-driven CFD solutions. The articles are listed alphabetic order. There are many sensible ways to categorize articles, e.g. regarding the learning type (supervised, un-supervised, reinforced) or the physics of interest (turbulence, mass transfer, etc.). Therefore, each list item below contains a small description and several useful keywords to relate similar articles.
 
 If you think there is some articles missing, if you would like to add/modify list items, or if you have general comments, please use the repository's [issue tracker](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/issues).
 
+## Abbreviations<a id="abbreviations"></a>
+
+| Abbreveation | Meaning |
+| :----------: | :------ |
+| **ADT** | **A**daboost **D**ecision **T**ree |
+| **CNN** | **C**onvoloutional **N**eural **N**etwork |
+| **MLP** | **M**ulti**l**ayer **P**erceptron |
+| **RANS**  | **R**eynolds **A**veraged **N**avier **S**tokes |
+| **RF**  | **R**andom **F**orest |
+| **ROC**  | **R**eceiver **O**perating **C**haracteristic |
+
+## Articles<a id="articles"></a>
+
 M. **Alsalman** et al.: [Training bioinspired sensors to classify flows (2018)](https://iopscience.iop.org/article/10.1088/1748-3190/aaef1d)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
-- Description:
+- Aim: classification of flow patterns based on local vorticity measurements; influence of sensor types on accuracy of flow classification
+- Learning type: supervised learning (classification)
+- ML algorithms: MLP, SGD
+- ML frameworks: Mathematica 11.1.1
+- CFD framework: inhouse
+- Combination of CFD + ML: post
 
 S. **Bhatnagar** et al.: [Prediction of aerodynamic flow fields using convolutional neural networks (2019)](https://link.springer.com/article/10.1007%2Fs00466-019-01740-0)
 - Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Learning type: supervised learning (regression)
+- ML algorithms: CNN,
+- ML frameworks: Caffe
+- CFD framework: overturns cfd
 - Combination of CFD + ML:
 - Description:
 
@@ -77,12 +97,12 @@ S. H. **Cheung** et al.: [Bayesian uncertainty analysis with applications to tur
 - Description:
 
 B. **Colvert** et al.: [Classifying vortex wakes using neural networks (2018)](https://iopscience.iop.org/article/10.1088/1748-3190/aaa787)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: flows contain information about objects creating them; classification of flow patterns based on local vorticity measurements
+- Learning type: supervised learning (classification)
+- ML algorithms: MLP, SGD
+- ML frameworks: Mathematica 11.1.1
+- CFD framework: inhouse
+- Combination of CFD + ML: post
 - Description:
 
 S. J. **Daniels** et al.: [A Suite of Computationally Expensive Shape Optimisation Problems Using Computational Fluid Dynamics (2018)](https://link.springer.com/chapter/10.1007%2F978-3-319-99259-4_24)
@@ -113,13 +133,12 @@ W. **Edeling** et al.: [Bayesian Predictions of Reynolds-Averaged Navier–Stoke
 - Description:
 
 N. B. **Erichson** et al.: [Physics-informed Autoencoders for Lyapunov-stable Fluid Flow Prediction (2019)](https://arxiv.org/abs/1905.10866)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
-- Description:
+- Aim: use physics-informed prior knowledge (Lyapunov stability) for improving model quality  (generalization performance, sensitivity to parameter tuning, robustness to noise)
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP, Autoencoder
+- ML frameworks: PyTorch
+- CFD framework: -
+- Combination of CFD + ML: post
 
 K. **Fukami** et al.: [Super-resolution reconstruction of turbulent flows with machine learning (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/superresolution-reconstruction-of-turbulent-flows-with-machine-learning/0DEBFE07FD949054E7E5046AB5632F22)
 - Aim:
@@ -156,6 +175,14 @@ F. **Gueniat** et al.: [A statistical learning strategy for closed-loop control 
 - CFD framework:
 - Combination of CFD + ML:
 - Description:
+
+X. **Guo** et al.: [Convolutional Neural Networks for Steady Flow Approximation (2016)](https://autodeskresearch.com/publications/convolutional-neural-networks-steady-flow-approximation)
+- Aim:
+- Learning type:
+- ML algorithms:
+- ML frameworks: Caffe
+- CFD framework:
+- Combination of CFD + ML: post
 
 B. N. **Hanna** et al.: [Coarse-Grid Computational Fluid Dynamics Error Prediction using Machine Learning (2017)](https://arxiv.org/abs/1710.09105)
 - Aim:
@@ -211,15 +238,6 @@ J. N. **Kutz** et al.: [Deep learning in fluid dynamics (2017)](https://www.camb
 - Combination of CFD + ML:
 - Description:
 
-J. N. **Kutz**: [Deep learning in fluid dynamics (2017)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/deep-learning-in-fluid-dynamics/F2EDDAB89563DE5157FC4B8342AD9C70)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
-- Description:
-
 L. **Ladicky** et al.: [Data-driven Fluid Simulations using Regression Forests (2015)](https://dl.acm.org/citation.cfm?doid=2816795.2818129)
 - Aim:
 - Learning type:
@@ -248,13 +266,12 @@ I. E. **Lagaris** et al.: [Neural-Network Methods for Boundary ValueProblems wit
 - Description:
 
 J. **Ling** et al.: [Evaluation of machine learning algorithms for prediction of regions of high Reynolds averaged Navier Stokes uncertainty (2015)](https://aip.scitation.org/doi/10.1063/1.4927765)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
-- Description:
+- Aim: train ML algorithms to identify regions of high RANS uncertainty; point-by-point classification of high or low uncertainty; show that classifiers can generalize to flows substantially different from training data
+- Learning type: supervised learning (classification)
+- ML algorithms: SVM, ADT, RF, ROC
+- ML frameworks: Scikit Learn
+- CFD framework: Fluent 12.0, Sierra Fuego, Sigma CFD
+- Combination of CFD + ML: post
 
 J. **Ling** et al.: [Reynolds averaged turbulence modelling using deep neural networks with embedded invariance (2016)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/reynolds-averaged-turbulence-modelling-using-deep-neural-networks-with-embedded-invariance/0B280EEE89C74A7BF651C422F8FBD1EB)
 - Aim:
@@ -338,6 +355,15 @@ M. **Milano** et al.: [Neural Network Modeling for Near Wall Turbulent Flow (200
 - Description:
 
 K. **Mills** et al.: [Deep learning and the Schrödinger equation (2017)](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.042113)
+- Aim:
+- Learning type:
+- ML algorithms:
+- ML frameworks:
+- CFD framework:
+- Combination of CFD + ML:
+- Description:
+
+M. **Moioli** et al.: [Parametric data-based turbulence modelling for vortex dominated flows (2019)](https://www.tandfonline.com/doi/full/10.1080/10618562.2019.1617857?scroll=top&needAccess=true)
 - Aim:
 - Learning type:
 - ML algorithms:
@@ -643,7 +669,7 @@ H. **Xiao** et al.: [Quantifying and reducing model-form uncertainties in Reynol
 - Combination of CFD + ML:
 - Description:
 
-Z. J. **Zhang** et al.: [Machine Learning Methods for Data-Driven Turbulence Modeling (2015)](hhttps://arc.aiaa.org/doi/abs/10.2514/6.2015-2460)
+Z. J. **Zhang** et al.: [Machine Learning Methods for Data-Driven Turbulence Modeling (2015)](https://arc.aiaa.org/doi/abs/10.2514/6.2015-2460)
 - Aim:
 - Learning type:
 - ML algorithms:
