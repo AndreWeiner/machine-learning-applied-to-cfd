@@ -143,6 +143,8 @@ journal = {Chemical Engineering \& Technology},
 
 - An overview of articles related to ML + CFD can be found [here](https://github.com/AndreWeiner/machine-learning-applied-to-cfd/blob/master/literature.md).
 - Quora answer to [What are the hot topics in Fluid Dynamics involving Machine Learning?](https://www.quora.com/What-are-the-hot-topics-in-Fluid-Dynamics-involving-Machine-Learning/answer/Andre-Weiner-2)
+- Slides: [A brief introduction to machine learning and its potential application to CFD](https://andreweiner.github.io/reveal.js/ofw2019_slides.html#/)
+- Slides: [Data-driven subgrid-scale modeling for convection-dominated concentration boundary layers](https://andreweiner.github.io/reveal.js/ofw2019_sgs_modeling.html#/)
 
 ## Other repositories with related content<a id="related_repositories"></a>
 
