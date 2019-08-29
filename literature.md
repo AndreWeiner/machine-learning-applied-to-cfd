@@ -27,11 +27,14 @@ The number of articles per year is based on the literature [list below](#article
 | :----------: | :------ |
 | **ADT** | **A**daboost **D**ecision **T**ree |
 | **CNN** | **C**onvoloutional **N**eural **N**etwork |
+| **DRL** | **D**eep **R**einforcement **L**earning |
+| **DSC** | **D**ownsampled **S**kip **C**onnection |
 | **GAN** | **G**enerative **A**dversarial **N**etwork |
 | **KNN** | **K**-**N**earest **N**eighbors |
 | **LASSO** | **L**east **A**bsolute **S**hrinkage and **S**election **O**perator |
 | **LSTM** | **L**ong **S**hort **T**erm **M**emory |
 | **MLP** | **M**ulti**l**ayer **P**erceptron |
+| **MSN** | **M**ulti **S**cale **N**etwork  |
 | **PCA** | **P**rincipal **C**omponent **A**nalysis |
 | **RANS**  | **R**eynolds **A**veraged **N**avier **S**tokes |
 | **RF**  | **R**andom **F**orest |
@@ -74,36 +77,36 @@ S. L. **Brunton** et al.: [Machine Learning for Fluid Mechanics (2019)](https://
 - Combination of CFD + ML: -
 
 S. **Chanda** et al.: [Estimation of principal thermal conductivities of layered honeycomb composites using ANN-GA based inverse technique (2017)](https://www.sciencedirect.com/science/article/pii/S1290072916305841?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: estimation of principal thermal conductivities of layered honeycomb composite material; minimization of the difference between measured and computed temperatures
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: Matlab
+- Combination of CFD + ML: interactively
 
 C. W. **Chang** et al.: [A Study of Physics-Informed Deep Learning for System Fluid Dynamics Closures (2016)](https://www.researchgate.net/publication/311767999_A_Study_of_Physics-Informed_Deep_Learning_for_System_Fluid_Dynamics_Closures)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: study stability of DL-based closure models for fluid dynamics; test influence of activation function and model complexity
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Tensorflow
+- CFD framework: inhouse, Modelica
+- Combination of CFD + ML: post
 
 C. W. **Chang** et al.: [Classification of machine learning frameworks for data-driven thermal fluid models (2019)](https://www.sciencedirect.com/science/article/pii/S1290072917317672?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: classification system for usage of ML in data-driven modeling of thermal fluids; demonstrate ML-model types on thermal conductivity problem
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP, CNN
+- ML frameworks: Tensorflow
+- CFD framework: inhouse, various
+- Combination of CFD + ML: post, interactively
 
 S. H. **Cheung** et al.: [Bayesian uncertainty analysis with applications to turbulence modeling (2011)](https://www.sciencedirect.com/science/article/pii/S0951832011000664)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: apply Bayesian uncertainty quantification to the process of calibrating mathematical models and the to prediction of quantities to interest; comparison of Spalart-Allmaras model clases in terms of their posterior probabilities to fit experimental observations; selection of appropriate model classes for given task
+- Learning type: -
+- ML algorithms: Bayesian statistics, markov chains
+- ML frameworks: inhouse
+- CFD framework: OpenFOAM
+- Combination of CFD + ML: post
 
 B. **Colvert** et al.: [Classifying vortex wakes using neural networks (2018)](https://iopscience.iop.org/article/10.1088/1748-3190/aaa787)
 - Aim: flows contain information about objects creating them; classification of flow patterns based on local vorticity measurements
@@ -114,28 +117,28 @@ B. **Colvert** et al.: [Classifying vortex wakes using neural networks (2018)](h
 - Combination of CFD + ML: post
 
 S. J. **Daniels** et al.: [A Suite of Computationally Expensive Shape Optimisation Problems Using Computational Fluid Dynamics (2018)](https://link.springer.com/chapter/10.1007%2F978-3-319-99259-4_24)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: create a set of computationally expensive benchmark test problems for design optimisation using CFD; development of a Python software package for parameterized geometry creation and object function computation
+- Learning type: -
+- ML algorithms: generic
+- ML frameworks: generic
+- CFD framework: OpenFOAM
 - Combination of CFD + ML:
 
 K. **Duraisamy** et al.: [Turbulence Modeling in the Age of Data (2019)](https://www.annualreviews.org/doi/full/10.1146/annurev-fluid-010518-040547)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: review article for developments in bounding uncertainties in RANS models via physical constrains, adopting statistical inference to characterize model coefficients and discrepancies, and in using machine learning to improve turbulence models;
+- Learning type: -
+- ML algorithms: -
+- ML frameworks: -
+- CFD framework: -
+- Combination of CFD + ML: -
 
 W. **Edeling** et al.: [Bayesian Predictions of Reynolds-Averaged Navier–Stokes Uncertainties Using Maximum a Posteriori Estimates (2018)](https://arc.aiaa.org/doi/abs/10.2514/1.J056287)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: Bayesian model-scenario averaging to combine the predictions of several competing models validated on various sets of data; stochastic estimate of a quantity of interest in an unmeasured prediction scenario
+- Learning type: supervised learning (regression)
+- ML algorithms: Bayesian averaging
+- ML frameworks: -
+- CFD framework: Fluent
+- Combination of CFD + ML: post
 
 N. B. **Erichson** et al.: [Physics-informed Autoencoders for Lyapunov-stable Fluid Flow Prediction (2019)](https://arxiv.org/abs/1905.10866)
 - Aim: use physics-informed prior knowledge (Lyapunov stability) for improving model quality  (generalization performance, sensitivity to parameter tuning, robustness to noise)
@@ -146,59 +149,59 @@ N. B. **Erichson** et al.: [Physics-informed Autoencoders for Lyapunov-stable Fl
 - Combination of CFD + ML: post
 
 K. **Fukami** et al.: [Super-resolution reconstruction of turbulent flows with machine learning (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/superresolution-reconstruction-of-turbulent-flows-with-machine-learning/0DEBFE07FD949054E7E5046AB5632F22)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: reconstruct laminar flow around a cylinder and 2D homogeneous turbulence  based on low-resolution simulation data
+- Learning type: supervised learning (regression)
+- ML algorithms: CNN, DSC, MSN, autoencoder
+- ML frameworks: Tensorflow, Keras, Scikit Learn
+- CFD framework: database
+- Combination of CFD + ML: post
 
 K. **Fukami** et al.: [Synthetic turbulent inflow generator using machine learning (2019)](https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.4.064603)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: generate time-dependent turbulent inflow data to replace conventional driver simulations or synthetic inflow generators; investigation of spurious periodicity; lower computational cost of DNS
+- Learning type: supervised learning (regression)
+- ML algorithms: autoencoder, CNN, MLP
+- ML frameworks: Tensorflow, Keras, Scikit Learn
+- CFD framework: inhouse
 - Combination of CFD + ML:
 
 P. **Garnier** et al.: [A review on Deep Reinforcement Learning for Fluid Mechanics (2019)](https://www.researchgate.net/publication/335135215_A_review_on_Deep_Reinforcement_Learning_for_Fluid_Mechanics?enrichId=rgreq-f81d3b4060722673d27e405be0651367-XXX&enrichSource=Y292ZXJQYWdlOzMzNTEzNTIxNTtBUzo3OTM1MDU5MzI3ODM2MjJAMTU2NjE5Nzk2NTk2MQ%3D%3D&el=1_x_2&_esc=publicationCoverPdf)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: review article of DRL application to fluid dynamics problems; discussion of advantages and disadvantages of different coupling methods (deep Q learning, policy gradients)
+- Learning type: (deep) reinforcement learning
+- ML algorithms: deep Q-networks, deep policy gradient, advantage actor-critic, proximal policy optimization
+- ML frameworks: Tensorflow
+- CFD framework: Fenics
 - Combination of CFD + ML:
 
 F. **Gueniat** et al.: [A statistical learning strategy for closed-loop control of fluid flows (2016)](https://link.springer.com/article/10.1007/s00162-016-0392-y)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: discuss closed-loop control for complex systems; derive Markov process model based on sensor measurements
+- Learning type: reinforcement learning
+- ML algorithms: Markov process, Q-learning
+- ML frameworks: inhouse
+- CFD framework: inhouse
 - Combination of CFD + ML:
 
 X. **Guo** et al.: [Convolutional Neural Networks for Steady Flow Approximation (2016)](https://autodeskresearch.com/publications/convolutional-neural-networks-steady-flow-approximation)
-- Aim:
-- Learning type:
-- ML algorithms:
+- Aim: real-time prediction of non-uniform steady laminar flow in a 2D or 3D domain based on CNNs; explore alternatives for geometry representation
+- Learning type: supervised learning
+- ML algorithms: CNN
 - ML frameworks: Caffe
-- CFD framework:
+- CFD framework: OpenLB
 - Combination of CFD + ML: post
 
 B. N. **Hanna** et al.: [Coarse-Grid Computational Fluid Dynamics Error Prediction using Machine Learning (2017)](https://arxiv.org/abs/1710.09105)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: ML-based surrogate model for the prediction of errors in coarse grid CFD simulations; application to 3D lid-driven cavity
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP, RF regression
+- ML frameworks: inhouse
+- CFD framework: OpenFOAM
+- Combination of CFD + ML: post
 
 J. R. **Holland** et al.: [Towards Integrated Field Inversion and Machine Learning With Embedded Neural Networks for RANS Modeling (2019)](https://arc.aiaa.org/doi/abs/10.2514/6.2019-1884)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: reduce model form errors in RANS simulations; integrate learning step into field inversion process; reduce training time by "layered approach"
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: inhouse
+- CFD framework: SU2
 - Combination of CFD + ML:
 
 K. **Jambunathan** et al.: [Evaluating convective heat transfer coefficients using neural networks (1996)](https://www.sciencedirect.com/science/article/pii/0017931095003320)
@@ -570,6 +573,14 @@ G. **Tryggvason** et al.: [DNS–Assisted Modeling of Bubbly Flows in Vertical C
 - Combination of CFD + ML:
 
 S. **Verma** et al.: [Efficient collective swimming by harnessing vortices through deep reinforcement learning (2018)](https://www.pnas.org/content/115/23/5849)
+- Aim:
+- Learning type:
+- ML algorithms:
+- ML frameworks:
+- CFD framework:
+- Combination of CFD + ML:
+
+J. **Viquerat** et al.: [Direct shape optimization through deep reinforcement learning (2019)](https://www.researchgate.net/publication/335430058_DIRECT_SHAPE_OPTIMIZATION_THROUGH_DEEP_REINFORCEMENT_LEARNING?_iepl%5BactivityId%5D=1143115285139465&_iepl%5BactivityTimestamp%5D=1566980522&_iepl%5BactivityType%5D=person_add_feedback_publication&_iepl%5Bcontexts%5D%5B0%5D=homeFeed&_iepl%5BrecommendationActualVariant%5D=&_iepl%5BrecommendationDomain%5D=&_iepl%5BrecommendationScore%5D=&_iepl%5BrecommendationTargetActivityCombination%5D=&_iepl%5BrecommendationType%5D=&_iepl%5BfeedVisitIdentifier%5D=&_iepl%5BpositionInFeed%5D=2&_iepl%5BsingleItemViewId%5D=Q2hzZ1HiELgYMBejWB1ZSiVc&_iepl%5BviewId%5D=s4cXeT695Pzlig16QVzHUyvr&_iepl%5BhomeFeedVariantCode%5D=ncls&_iepl%5B__typename%5D=HomeFeedTrackingPayload&_iepl%5BinteractionType%5D=publicationOpenViewer&_iepl%5BtargetEntityId%5D=PB%3A335430058)
 - Aim:
 - Learning type:
 - ML algorithms:
