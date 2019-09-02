@@ -26,6 +26,7 @@ The number of articles per year is based on the literature [list below](#article
 | Abbreveation | Meaning |
 | :----------: | :------ |
 | **ADT** | **A**daboost **D**ecision **T**ree |
+| **BFGS**   | **B**royden **F**letcher **G**oldfarb **S**hanno method |
 | **CNN** | **C**onvoloutional **N**eural **N**etwork |
 | **DRL** | **D**eep **R**einforcement **L**earning |
 | **DSC** | **D**ownsampled **S**kip **C**onnection |
@@ -35,12 +36,15 @@ The number of articles per year is based on the literature [list below](#article
 | **LSTM** | **L**ong **S**hort **T**erm **M**emory |
 | **MLP** | **M**ulti**l**ayer **P**erceptron |
 | **MSN** | **M**ulti **S**cale **N**etwork  |
+| **PINN** | **P**hysics **I**nformed **N**eural **N**etworks |
 | **PCA** | **P**rincipal **C**omponent **A**nalysis |
 | **RANS**  | **R**eynolds **A**veraged **N**avier **S**tokes |
+| **RBNN** | **R**adial **B**asis Function **N**eural **N**etwork  |
 | **RF**  | **R**andom **F**orest |
 | **RNN**  | **R**ecurrent **N**eural **N**etwork |
 | **ROC**  | **R**eceiver **O**perating **C**haracteristic |
 | **SOM**  | **S**elf **O**rganizing **M**ap |
+| **TBNN** | **T**ensor **B**asis **N**eural **N**etwork |
 
 ## Articles<a id="articles"></a>
 
@@ -205,60 +209,60 @@ J. R. **Holland** et al.: [Towards Integrated Field Inversion and Machine Learni
 - Combination of CFD + ML:
 
 K. **Jambunathan** et al.: [Evaluating convective heat transfer coefficients using neural networks (1996)](https://www.sciencedirect.com/science/article/pii/0017931095003320)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: predict heat transfer coefficients based on temperature measurements over time; generate explicit relationship for heat transfer coefficients based on neural network
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: NeuralWorks Professional Plus
+- CFD framework: -
+- Combination of CFD + ML: post
 
 M. L. A. **Kaandorp** et al.: [Stochastic Random Forests with Invariance for RANS Turbulence Modelling (2018)](https://arxiv.org/abs/1810.08794)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: predict Reynolds-stress anisotropy tensor while guaranteeing Galilean invariance by making use of the tensor basis; usage of random forest to detect outliers in training data, to prevent overfitting, and to provide uncertainty estimates;
+- Learning type: supervised learning (regression, classification)
+- ML algorithms: RF, MLP
+- ML frameworks: not specified
+- CFD framework: OpenFOAM
+- Combination of CFD + ML: post, interactively
 
 B. **Kim** et al.: [Deep Fluids: A Generative Network for Parameterized Fluid Simulations (2019)](https://arxiv.org/abs/1806.02071)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: synthesize fluid simulations from a set of reduced parameters; propose loss function that guarantees divergence-free velocity fields; handle complex parameterizations in reduced spaces and advance simulations in time by integrating the latent space with a second network
+- Learning type: supervised learning (regression), unsupervised learning
+- ML algorithms: CNN, autoencoder, MLP, GAN
+- ML frameworks: Tensorflow
+- CFD framework: Mantaflow
 - Combination of CFD + ML:
 
 J. N. **Kutz** et al.: [Deep learning in fluid dynamics (2017)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/deep-learning-in-fluid-dynamics/F2EDDAB89563DE5157FC4B8342AD9C70)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: short overview article for deep learning in turbulence modeling; pose open questions regarding data-driven models
+- Learning type: -
+- ML algorithms: -
+- ML frameworks: -
+- CFD framework: -
+- Combination of CFD + ML: -
 
 L. **Ladicky** et al.: [Data-driven Fluid Simulations using Regression Forests (2015)](https://dl.acm.org/citation.cfm?doid=2816795.2818129)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: formulate machine learning and physics based fluid simulation as regression problem for time-critical simulations
+- Learning type: supervised learning (regression)
+- ML algorithms: RF
+- ML frameworks: not specified
+- CFD framework: PCISPH
+- Combination of CFD + ML: post
 
 I. E. **Lagaris** et al.: [Artificial Neural Networks for Solving Ordinary and Partial Differential Equations (1998)](https://pdfs.semanticscholar.org/5ebb/e0b1a3d7a2431bbb25d6dfeec7ed6954d633.pdf)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: formulate IBVs as optimization problem; approximate ODE (system) PDS solution based on neural networks; compare to finite elements
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP, BFGS
+- ML frameworks: Merlin
+- CFD framework: inhouse
+- Combination of CFD + ML: post
 
 I. E. **Lagaris** et al.: [Neural-Network Methods for Boundary ValueProblems with Irregular Boundaries (2000)](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=870037)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: approximate solution of IBV problems on irregular domains; test on 2D and 3D domains
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP, RBNN
+- ML frameworks: Merlin
+- CFD framework: -
+- Combination of CFD + ML: -
 
 J. **Ling** et al.: [Evaluation of machine learning algorithms for prediction of regions of high Reynolds averaged Navier Stokes uncertainty (2015)](https://aip.scitation.org/doi/10.1063/1.4927765)
 - Aim: train ML algorithms to identify regions of high RANS uncertainty; point-by-point classification of high or low uncertainty; show that classifiers can generalize to flows substantially different from training data
@@ -269,36 +273,36 @@ J. **Ling** et al.: [Evaluation of machine learning algorithms for prediction of
 - Combination of CFD + ML: post
 
 J. **Ling** et al.: [Reynolds averaged turbulence modelling using deep neural networks with embedded invariance (2016)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/reynolds-averaged-turbulence-modelling-using-deep-neural-networks-with-embedded-invariance/0B280EEE89C74A7BF651C422F8FBD1EB)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: learn a model for the Reynolds stress anisotropy from high-fidelity simulation data; propose neural network architecture with invariant tensor basis to embed Galilean invariance of predicted anisotropy tensor
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP, TBNN
+- ML frameworks: FFNet
+- CFD framework: Fluent, database
+- Combination of CFD + ML: post, interactively
 
 J. **Ling** et al.: [Machine learning strategies for systems with invariance properties (2016)](https://www.sciencedirect.com/science/article/pii/S0021999116301309?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: address machine learning for systems with symmetry or invariance properties; explore two ways of incorporating invariance in models: based on invariant features and based on specifically transformed data
+- Learning type: supervised learning (regression)
+- ML algorithms: RF, MLP
+- ML frameworks: scikit-learn, FFNet
+- CFD framework: Fluent 12.0
+- Combination of CFD + ML: post
 
 J. C. **Loiseau** et al.: [Constrained sparse Galerkin regression (2018)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/constrained-sparse-galerkin-regression/0E18A4A55FF5AC1401D236C0E4D1CAAE)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: combine approach for creation of nonlinear low-order models with dimensionality reduction and enforce physical constraints in the regression; create method without need for high-fidelity data
+- Learning type: supervised learning (regression)
+- ML algorithms: PCA, LASSO
+- ML frameworks: scikit-learn
+- CFD framework: database
+- Combination of CFD + ML: post
 
 L. **Lu** et al.: [DeepXDE: A deep learning library for solving differential equations (2019)](https://arxiv.org/abs/1907.04502)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: propose a residual-based adaptive refinement to improve training efficiency of PINNs; present a Python library for PINNs
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: DeepXDE, Tensorflow
+- CFD framework: -
+- Combination of CFD + ML: -
 
 M. **Ma** et al.: [Using statistical learning to close two-fluid multiphase flow equations for bubbly flows in vertical channels (2015)](https://aip.scitation.org/doi/10.1063/1.4930004)
 - Aim:
