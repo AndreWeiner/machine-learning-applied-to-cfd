@@ -31,8 +31,11 @@ The number of articles per year is based on the literature [list below](#article
 | **DRL** | **D**eep **R**einforcement **L**earning |
 | **DSC** | **D**ownsampled **S**kip **C**onnection |
 | **GAN** | **G**enerative **A**dversarial **N**etwork |
+| **GP** | **G**aussian **P**rocess |
+| **KDE** | **K**ernel **D**ensity **E**stimation |
 | **KNN** | **K**-**N**earest **N**eighbors |
 | **LASSO** | **L**east **A**bsolute **S**hrinkage and **S**election **O**perator |
+| **LES** | **L**arge **E**ddy **S**imulation |
 | **LSTM** | **L**ong **S**hort **T**erm **M**emory |
 | **MLP** | **M**ulti**l**ayer **P**erceptron |
 | **MSN** | **M**ulti **S**cale **N**etwork  |
@@ -43,6 +46,7 @@ The number of articles per year is based on the literature [list below](#article
 | **RF**  | **R**andom **F**orest |
 | **RNN**  | **R**ecurrent **N**eural **N**etwork |
 | **ROC**  | **R**eceiver **O**perating **C**haracteristic |
+| **SBS** | **S**equential **B**ackward **S**election |
 | **SOM**  | **S**elf **O**rganizing **M**ap |
 | **TBNN** | **T**ensor **B**asis **N**eural **N**etwork |
 
@@ -56,12 +60,28 @@ M. **Alsalman** et al.: [Training bioinspired sensors to classify flows (2018)](
 - CFD framework: inhouse
 - Combination of CFD + ML: post
 
+S. **Bhalla** et al.: [Compact Representation of a Multi-dimensional Combustion Manifold Using Deep Neural Networks (2019)](https://www.researchgate.net/publication/334636567_Compact_Representation_of_a_Multi-dimensional_Combustion_Manifold_Using_Deep_Neural_Networks)
+- Aim: approximate combustion manifold using a neural network to predict temperature and composition of reaction; comparison to tabulation methods; publication of combustion data set
+- Learning type: supervised learning (classification)
+- ML algorithms: MLP, batch normalization, ensemble
+- ML frameworks: not specified
+- CFD framework: OpenFOAM
+- Combination of CFD + ML: post, interactively
+
 S. **Bhatnagar** et al.: [Prediction of aerodynamic flow fields using convolutional neural networks (2019)](https://link.springer.com/article/10.1007%2Fs00466-019-01740-0)
 - Aim: predict velocity and pressure in unseen flow conditions given the pixelated shape of the object; predict impact of airfoil shape on aerodynamic forces in near real time
 - Learning type: supervised learning (regression)
 - ML algorithms: CNN, parameter sharing, gradient sharpening
 - ML frameworks: Caffe
 - CFD framework: overturns cfd
+- Combination of CFD + ML: post
+
+M. **Bode** et al.: [Towards Prediction of Turbulent Flows at High Reynolds Numbers Using High Performance Computing Data and Deep Learning (2019)](https://link.springer.com/chapter/10.1007%2F978-3-030-02465-9_44)
+- Aim: discuss suitability of various GAN architectures for understanding and modeling turbulence; use DNS data to train GANs and asses statistics of predicted turbulent fields
+- Learning type: supervised learning (regression)
+- ML algorithms: Wasserstein GAN
+- ML frameworks: Keras, Tensorflow, Horovod
+- CFD framework: database
 - Combination of CFD + ML: post
 
 S. L. **Brunton** et al.: [Discovering governing equations from data by sparse identification of nonlinear dynamical systems (2016)](https://www.pnas.org/content/113/15/3932)
@@ -206,7 +226,15 @@ J. R. **Holland** et al.: [Towards Integrated Field Inversion and Machine Learni
 - ML algorithms: MLP
 - ML frameworks: inhouse
 - CFD framework: SU2
-- Combination of CFD + ML:
+- Combination of CFD + ML: post
+
+M. **Ihme** et al.: [Optimal artificial neural networks and tabulation methods for chemistry representation in LES of a bluff-body swirl-stabilized flame (2009)](https://www.sciencedirect.com/science/article/pii/S1540748908001132)
+- Aim: LES of bluff-body swirl-stabilized methane-hydrogen flame with structured tabulation and neural networks; comparison of tabulation and network based methods regarding accuracy, data retrieval time and storage requirements
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: not specified
+- CFD framework: not specified
+- Combination of CFD + ML: post, interactively
 
 K. **Jambunathan** et al.: [Evaluating convective heat transfer coefficients using neural networks (1996)](https://www.sciencedirect.com/science/article/pii/0017931095003320)
 - Aim: predict heat transfer coefficients based on temperature measurements over time; generate explicit relationship for heat transfer coefficients based on neural network
@@ -305,20 +333,20 @@ L. **Lu** et al.: [DeepXDE: A deep learning library for solving differential equ
 - Combination of CFD + ML: -
 
 M. **Ma** et al.: [Using statistical learning to close two-fluid multiphase flow equations for bubbly flows in vertical channels (2015)](https://aip.scitation.org/doi/10.1063/1.4930004)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
--
+- Aim: use DNS of bubbly flows to find closure terms for a simple model of the average flow; train neural network on one simulation and use it to predict evolution of different initial conditions
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: inhouse
+- Combination of CFD + ML: post
+
 M. **Ma** et al.: [Using statistical learning to close two-fluid multiphase flow equations for bubbly flows in vertical channels (2016)](https://www.sciencedirect.com/science/article/pii/S0301932215302226?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: use DNS of bubbly up-flow in a periodic vertical channel to generate closure relationships for a simplified two-fluid model for the average flow; generate database by averaging DNS results over planes parallel to the walls; test closure realation for different initial conditions
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: inhouse
+- Combination of CFD + ML: post
 
 P. **Ma** et al.: [Fluid Directed Rigid Body Control using Deep Reinforcement Learning (2018)](https://dl.acm.org/citation.cfm?id=3201334)
 - Aim:
@@ -393,12 +421,12 @@ S. **Pierret** et al.: [Turbomachinery Blade Design Using a Navier–Stokes Solv
 - Combination of CFD + ML:
 
 Y. **Qi** et al.: [Computing curvature for volume of fluid methods using machine learning (2019)](https://www.sciencedirect.com/science/article/pii/S0021999118307046?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: create data set with volume fractions and corresponding curvature for well-defined shapes, and use machine learning to fit the data; test model on shapes not used for training and in an interface capturing solver
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: inhouse
+- Combination of CFD + ML: interactively
 
 J. **Rabault** et al.: [Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/artificial-neural-networks-trained-through-deep-reinforcement-learning-discover-control-strategies-for-active-flow-control/D5B80D809DFFD73760989A07F5E11039)
 - Aim:
@@ -495,6 +523,14 @@ M. **Schmelzer** et al.: [Machine Learning of Algebraic Stress Models using Dete
 - ML frameworks:
 - CFD framework:
 - Combination of CFD + ML:
+
+N. **Shah** et al.: [Prediction of Autoignition and Flame Properties for Multicomponent Fuels Using Machine Learning Techniques (2019)](https://www.researchgate.net/publication/331966092_Prediction_of_Autoignition_and_Flame_Properties_for_Multicomponent_Fuels_Using_Machine_Learning_Techniques)
+- Aim: use RFs and MLPs to predict ignition delay times, flame speeds, octane ratings and CA50 values in homogeneous charge compression ignition engine for multicomponent gasoline surrogates
+- Learning type: supervised learning (regression)
+- ML algorithms: RF,  MLP
+- ML frameworks: not specified
+- CFD framework: TPRF surrogate model
+- Combination of CFD + ML: post
 
 Y. B. **Sinai** et al.: [Learning data-driven discretizations for partial differential equations (2019)](https://www.pnas.org/content/116/31/15344)
 - Aim:
@@ -596,7 +632,7 @@ J. X. **Wang** et al.: [Physics-informed machine learning approach for reconstru
 - Aim:
 - Learning type:
 - ML algorithms:
-- ML frameworks:
+- ML frameworks: not specified
 - CFD framework:
 - Combination of CFD + ML:
 
@@ -604,38 +640,38 @@ M. **Wang** et al.: [Detecting exotic wakes with hydrodynamic sensors (2019)](ht
 - Aim: wake sensing for exotic wake types that arise in swimming; classification library to classify unknown wakes from hydrodynamic signal measurements; locomotion control
 - Learning type: supervised learning (classification)
 - ML algorithms: KNN
-- ML frameworks: inhouse
+- ML frameworks: not specified
 - CFD framework: inhouse
 - Combination of CFD + ML: post
 
 A. **Weiner** et al.: [Data‐Driven Subgrid‐Scale Modeling for Convection‐Dominated Concentration Boundary Layers (2019)](https://onlinelibrary.wiley.com/doi/10.1002/ceat.201900044)
 - Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP, SBS, KNN
+- ML frameworks: PyTorch, Scikit Learn
+- CFD framework: OpenFOAM
+- Combination of CFD + ML: post, interactively
 
 J. L. **Wu** et al.: [A Priori Assessment of Prediction Confidence for Data-Driven Turbulence Modeling (2017)](https://link.springer.com/article/10.1007/s10494-017-9807-0)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: identify quantitative measure for a priori estimation of prediction confidence in data-driven turbulence modeling; use Mahalanobis distance and kernel density estimation to quantify distance in feature space; provide an approach to aid in the choice of data sources and to asses prediction performance
+- Learning type: unsupervised learning
+- ML algorithms: KDE, RF
+- ML frameworks: not specified
+- CFD framework: database
+- Combination of CFD + ML: post
 
 H. **Xiao** et al.: [Quantifying and reducing model-form uncertainties in Reynolds-averaged Navier–Stokes simulations: A data-driven, physics-informed Bayesian approach (2019)](https://www.sciencedirect.com/science/article/pii/S0021999116303394?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: develop data-driven, physics-informed Bayesian framework for quantifying model form uncertainties in RANS simulations; evaluate framework performance on periodic hill and square duct
+- Learning type: supervised learning
+- ML algorithms: GP, ensemble Kalman method, Bayesian inference
+- ML frameworks: inhouse, UQTk
+- CFD framework: OpenFOAM
+- Combination of CFD + ML: post
 
 Z. J. **Zhang** et al.: [Machine Learning Methods for Data-Driven Turbulence Modeling (2015)](https://arc.aiaa.org/doi/abs/10.2514/6.2015-2460)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: investigate machine learning capability to reconstruct the functional forms of fields extracted from high-fidelity  simulations and experimental data; application to turbulent channel flow and bypass transition
+- Learning type: supervised learning (regression)
+- ML algorithms: multiscale GP, GP, MLP
+- ML frameworks: Fast Artificial Neural Network library
+- CFD framework: database
+- Combination of CFD + ML: post
