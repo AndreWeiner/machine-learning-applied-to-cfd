@@ -349,52 +349,52 @@ M. **Ma** et al.: [Using statistical learning to close two-fluid multiphase flow
 - Combination of CFD + ML: post
 
 P. **Ma** et al.: [Fluid Directed Rigid Body Control using Deep Reinforcement Learning (2018)](https://dl.acm.org/citation.cfm?id=3201334)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: control a 2D coupled system of fluids and rigid bodies by applying control forces at the domain boundaries; create fluid controller to accomplish challenging 2D tasks as keeping a rigid body balanced, playing ping pong and driving a rigid body to hit specific points on a wall
+- Learning type: reinforcement learning
+- ML algorithms: MLP, autoencoder, CNN
+- ML frameworks: not specified
+- CFD framework: inhouse
+- Combination of CFD + ML: interactively
 
 R. **Maulik** et al.: [Subgrid modelling for two-dimensional turbulence using neural networks (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/subgrid-modelling-for-twodimensional-turbulence-using-neural-networks/10EDED1AEAA52C35F3E3A3BB6DC218C1)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: use high-fidelity data to train neural networks to predict a turbulent source term through localized grid resolved information; present hyper-parameter optimization analysis and learning quantification through probability-density-function-based validation of subgrid predictions; validate with 2D decaying turbulence
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Tensorflow
+- CFD framework: database
+- Combination of CFD + ML: post
 
 M. **Milano** et al.: [Neural Network Modeling for Near Wall Turbulent Flow (2002)](https://www.sciencedirect.com/science/article/pii/S0021999102971469)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: reconstruct the near wall field in a turbulent flow by exploiting flow fields provided by direct numerical simulations; comparison to results obtained from PCA; present outlook towards usages in wall functions for RANS or LES
+- Learning type: supervised learning, autoencoder
+- ML algorithms: MLP
+- ML frameworks: inhouse
+- CFD framework: inhouse
+- Combination of CFD + ML: post
 
 K. **Mills** et al.: [Deep learning and the Schrödinger equation (2017)](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.042113)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: train neual network to predict the ground-state energy of an electron in four classes of confining two-dimensional electrostatic potentials; investigate the performance of the model in predicting other quantities such as the kinetic energy and the first excited-state energy; compare different machine learning algorithms for the task
+- Learning type: supervised learning (regression)
+- ML algorithms: CNN
+- ML frameworks: Tensorflow
+- CFD framework: inhouse
+- Combination of CFD + ML: post
 
 M. **Moioli** et al.: [Parametric data-based turbulence modelling for vortex dominated flows (2019)](https://www.tandfonline.com/doi/full/10.1080/10618562.2019.1617857?scroll=top&needAccess=true)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: enhance Spalart–Allmaras model with additional source terms, which are exclusively active in the vortex field; optimize model based on experimental reference data
+- Learning type: parameter calibration
+- ML algorithms: gradient decent
+- ML frameworks: inhouse
+- CFD framework: TAU
+- Combination of CFD + ML: post
 
 T. **Murata** et al.: [Nonlinear mode decomposition with machine learning for fluid dynamics (2019)](https://arxiv.org/abs/1906.04029)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: decompose flow field using a CNN; create nonlinear decomposition to be used for feature extraction of flow fields in lower dimension than PCA
+- Learning type: unsupervised learning
+- ML algorithms: CNN, autoencoder
+- ML frameworks: not specified
+- CFD framework: not specified
+- Combination of CFD + ML: post
 
 G. **Novati** et al.: [Synchronisation through learning for two self-propelled swimmers (2017)](https://iopscience.iop.org/article/10.1088/1748-3190/aa6311)
 - Aim:
