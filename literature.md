@@ -41,6 +41,7 @@ The number of articles per year is based on the literature [list below](#article
 | **MSN** | **M**ulti **S**cale **N**etwork  |
 | **PINN** | **P**hysics **I**nformed **N**eural **N**etworks |
 | **PCA** | **P**rincipal **C**omponent **A**nalysis |
+| **PPO** | **P**roximal **P**olicy **O**ptimization |
 | **RANS**  | **R**eynolds **A**veraged **N**avier **S**tokes |
 | **RBNN** | **R**adial **B**asis Function **N**eural **N**etwork  |
 | **RF**  | **R**andom **F**orest |
@@ -557,84 +558,84 @@ A. P. **Singh** et al.: [Characterizing and Improving Predictive Accuracy in Sho
 - Combination of CFD + ML:
 
 C. M. **Stroefer** et al.: [Data-Driven, Physics-Based Feature Extraction from Fluid Flow Fields (2018)](https://arxiv.org/abs/1802.00775)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: present a physics-based, data-driven method capable of identifying any flow feature it is trained to; identify any type of feature, even distinguish between similar ones, without the need to explicitly define the physics
+- Learning type: supervised learning (classification)
+- ML algorithms: CNN
+- ML frameworks: Lasagne, Theano
+- CFD framework: database
 - Combination of CFD + ML:
 
 L. **Sun** et al.: [On developing data-driven turbulence model for DG solution of RANS (2019)](https://www.sciencedirect.com/science/article/pii/S1000936119301621?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: develop a neural network model with low complexity acting as an algebraic turbulence model to estimate the turbulence eddy viscosity for RANS
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: not specified
+- CFD framework: not specified
+- Combination of CFD + ML: post, interactively
 
 L. **Sun** et al.: [Surrogate Modeling for Fluid Flows Based on Physics-Constrained Deep Learning Without Simulation Data (2019)](https://www.researchgate.net/publication/333649855_Surrogate_Modeling_for_Fluid_Flows_Based_on_Physics-Constrained_Deep_Learning_Without_Simulation_Data)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: provide a physics-constrained DL approach for surrogate modeling of fluid flows without relying on any simulation data; a structured neural network is devised to enforce the initial and boundary conditions, and the governing partial differential equations are incorporated into the loss of the network to drive the training
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Tensorflow
+- CFD framework: -
+- Combination of CFD + ML: -
 
 J. **Tompson** et al.: [Accelerating Eulerian Fluid Simulation With Convolutional Networks (2017)](https://dl.acm.org/citation.cfm?id=3306035)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: propose a data-driven approach that leverages the approximation power of deep learning with the precision of standard solvers to obtain fast and highly realistic simulations
+- Learning type: supervised learning (regression)
+- ML algorithms: CNN
+- ML frameworks: Torch
+- CFD framework: Mantaflow
+- Combination of CFD + ML: post, interactively
 
 B. D. **Tracey** et al.: [Application of Supervised Learning to Quantify Uncertainties in Turbulence and Combustion Modeling (2013)](https://arc.aiaa.org/doi/abs/10.2514/6.2013-259)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: introduce a methodology aimed at improving low-fidelity models of turbulence and combustion and obtaining error bounds; develop a new machine learning algorithm to construct a stochastic model of the error of low-fidelity models using information from higher-fidelity data sets; obtain better approximations of uncertain model outputs and generate confidence intervals on the prediction of simulation outputs
+- Learning type: supervised learning (regression)
+- ML algorithms: kernel regression
+- ML frameworks: not specified
+- CFD framework: database
+- Combination of CFD + ML: post, interactively
 
 B. D. **Tracey** et al.: [A Machine Learning Strategy to Assist Turbulence Model Development (2015)](https://arc.aiaa.org/doi/abs/10.2514/6.2015-1287)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: use supervised learning algorithms to build a representation of turbulence modeling closure terms; investigate the feasibility of such an approach by attempting to reproduce, through a machine learning methodology, the results obtained with the well-established Spalart-Allmaras model
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: not specified
+- CFD framework: SU2
+- Combination of CFD + ML: post, interactively
 
 G. **Tryggvason** et al.: [DNS–Assisted Modeling of Bubbly Flows in Vertical Channels (2017)](https://www.tandfonline.com/doi/abs/10.13182/NSE16-10)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: discuss usage of DNS results to provide values for the unresolved closure terms in a simple average model for the flow found by statistical learning from the data using neural networks; explore using the results from simulations of large systems with bubbles of different sizes in turbulent flows for large eddy–like simulations
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: inhouse
+- Combination of CFD + ML: post
 
 S. **Verma** et al.: [Efficient collective swimming by harnessing vortices through deep reinforcement learning (2018)](https://www.pnas.org/content/115/23/5849)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: show that fish can improve their sustained propulsive efficiency by placing themselves in appropriate locations in the wake of other swimmers and intercepting judiciously their shed vortices; swimming strategy leads to collective energy savings and is revealed through a combination of high-fidelity flow simulations with a deep reinforcement learning algorithm
+- Learning type: reinforcement learning
+- ML algorithms: LSTM
+- ML frameworks: nt specified
+- CFD framework: CUBISM
+- Combination of CFD + ML: interactively
 
 J. **Viquerat** et al.: [Direct shape optimization through deep reinforcement learning (2019)](https://www.researchgate.net/publication/335430058_DIRECT_SHAPE_OPTIMIZATION_THROUGH_DEEP_REINFORCEMENT_LEARNING?_iepl%5BactivityId%5D=1143115285139465&_iepl%5BactivityTimestamp%5D=1566980522&_iepl%5BactivityType%5D=person_add_feedback_publication&_iepl%5Bcontexts%5D%5B0%5D=homeFeed&_iepl%5BrecommendationActualVariant%5D=&_iepl%5BrecommendationDomain%5D=&_iepl%5BrecommendationScore%5D=&_iepl%5BrecommendationTargetActivityCombination%5D=&_iepl%5BrecommendationType%5D=&_iepl%5BfeedVisitIdentifier%5D=&_iepl%5BpositionInFeed%5D=2&_iepl%5BsingleItemViewId%5D=Q2hzZ1HiELgYMBejWB1ZSiVc&_iepl%5BviewId%5D=s4cXeT695Pzlig16QVzHUyvr&_iepl%5BhomeFeedVariantCode%5D=ncls&_iepl%5B__typename%5D=HomeFeedTrackingPayload&_iepl%5BinteractionType%5D=publicationOpenViewer&_iepl%5BtargetEntityId%5D=PB%3A335430058)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: present the first application of DRL to direct shape optimization; show that artificial neural network trained through DRL is able to generate optimal shapes on its own, without any prior knowledge and in a constrained time
+- Learning type: reinforcement learning
+- ML algorithms: MLP, PPO
+- ML frameworks: Tensorflow, Tensorforce
+- CFD framework: Fenics
 - Combination of CFD + ML:
 
 J. X. **Wang** et al.: [Physics-informed machine learning approach for reconstructing Reynolds stress modeling discrepancies based on DNS data (2017)](https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.2.034603)
-- Aim:
-- Learning type:
-- ML algorithms:
+- Aim: propose a data-driven, physics-informed machine learning approach for reconstructing discrepancies in RANS modeled Reynolds stresses; discrepancy functions are trained by existing direct numerical simulation databases
+- Learning type: supervised learning (regression)
+- ML algorithms: RF
 - ML frameworks: not specified
-- CFD framework:
-- Combination of CFD + ML:
+- CFD framework: database, OpenFOAM
+- Combination of CFD + ML: post, interactively
 
 M. **Wang** et al.: [Detecting exotic wakes with hydrodynamic sensors (2019)](https://link.springer.com/article/10.1007%2Fs00162-019-00493-z)
 - Aim: wake sensing for exotic wake types that arise in swimming; classification library to classify unknown wakes from hydrodynamic signal measurements; locomotion control
