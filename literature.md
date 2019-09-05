@@ -431,7 +431,7 @@ Y. **Qi** et al.: [Computing curvature for volume of fluid methods using machine
 
 J. **Rabault** et al.: [Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/artificial-neural-networks-trained-through-deep-reinforcement-learning-discover-control-strategies-for-active-flow-control/D5B80D809DFFD73760989A07F5E11039)
 - Aim:
-- Learning type:
+- Learning type: reinforcement learning
 - ML algorithms:
 - ML frameworks:
 - CFD framework:
@@ -439,91 +439,95 @@ J. **Rabault** et al.: [Artificial neural networks trained through deep reinforc
 
 J. **Rabault** et al.: [Accelerating Deep Reinforcement Leaning strategies of Flow Control through a multi-environment approach (2019)](https://www.researchgate.net/publication/333995531_Accelerating_Deep_Reinforcement_Leaning_strategies_of_Flow_Control_through_a_multi-environment_approach)
 - Aim:
-- Learning type:
+- Learning type: reinforcement learning
 - ML algorithms:
 - ML frameworks:
 - CFD framework:
 - Combination of CFD + ML:
 
 M. **Raissi** et al.: [Hidden physics models: Machine learning of nonlinear partial differential equations (2018)](https://www.sciencedirect.com/science/article/pii/S0021999118307125)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: present a new paradigm of learning partial differential equations from small data; extract patterns from high-dimensional data generated from experiments
+- Learning type: supervised learning (regression)
+- ML algorithms: GP
+- ML frameworks: Mathematica, Matlab
+- CFD framework: -
+- Combination of CFD + ML: -
+- Code: [Github](https://github.com/maziarraissi/HPM)
 
 M. **Raissi** et al.: [Numerical Gaussian Processes for Time-Dependent and Nonlinear Partial Differential Equations (2018)](https://epubs.siam.org/doi/10.1137/17M1120762)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: introduce the concept of numerical Gaussian processes, which are defined as Gaussian processes with covariance functions resulting from temporal discretization of time-dependent partial differential equations
+- Learning type: supervised learning (regression)
+- ML algorithms: GP
+- ML frameworks: Matlab, Mathematica
+- CFD framework: inhouse
+- Combination of CFD + ML: -
+- Code: [Github](https://github.com/maziarraissi/NumericalGP)
 
 M. **Raissi** et al.: [Deep Learning of Turbulent Scalar Mixing (2018)](https://arxiv.org/abs/1811.07095)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: describe a framework for discovering turbulence models from scattered and potentially noisy spatio-temporal measurements of the probability density function
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Tensorflow
+- CFD framework: not specified
+- Combination of CFD + ML: post
 
 M. **Raissi** et al.: [Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations (2019)](https://www.sciencedirect.com/science/article/pii/S0021999118307125)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: present developments in the context of solving two main classes of problems: data-driven solution and data-driven discovery of partial differential equations
+- Learning type: supervised learning
+- ML algorithms: MLP
+- ML frameworks: Tensorflow
+- CFD framework: inhouse
+- Combination of CFD + ML: interactively
+- Code: [Github](https://github.com/maziarraissi/PINNs)
 
 J. **Ray** et al.: [Bayesian calibration of a k-e turbulence model for predictive jet-in-crossflow simulations (2016)](https://arc.aiaa.org/doi/10.2514/1.J054758)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: calibrate parameters of a RANS model to improve its predictive skill in jet-in-crossflow simulations; estimate parameters from Reynolds stress measurements obtained from an incompressible flow-over-a-square-cylinder experiment
+- Learning type: supervised learning (regression)
+- ML algorithms: Bayesian calibration
+- ML frameworks: not specified
+- CFD framework: SIGMA CFD
+- Combination of CFD + ML: post
 
 K. **Rudd** et al.: [A Constrained Backpropagation Approach for the Adaptive Solution of Partial Differential Equations (2014)](https://ieeexplore.ieee.org/document/6658964)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: solve nonlinear elliptic and parabolic partial differential equations (PDEs) adaptively; solve the constrained optimization problem associated with training a neural network to approximate the PDE solution by means of direct elimination
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: Matlab
+- Combination of CFD + ML: -
 
 K. **Rudd** et al.: [A constrained integration (CINT) approach to solving partial differential equations using artificial neural networks (2015)](https://www.sciencedirect.com/science/article/pii/S092523121401652X)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: combine classical Galerkin methods with a constrained backpropogation training approach to obtain an artificial neural network representation of the PDE solution that approximately satisfies the boundary conditions at every integration step
+- Learning type: supervised learning
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: Matlab
+- Combination of CFD + ML: interactively
 
 S. H. **Rudy** et al.: [Data-driven discovery of partial differential equations (2017)](https://advances.sciencemag.org/content/3/4/e1602614)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: propose a sparse regression method capable of discovering the governing partial differential equation(s) of a given system by time series measurements in the spatial domain; select the nonlinear and partial derivative terms of the governing equations that most accurately represent the data, bypassing a combinatorially large search through all possible candidate models
+- Learning type: supervised learning (regression)
+- ML algorithms: RIDGE regression
+- ML frameworks: inhouse
+- CFD framework: inhouse
+- Combination of CFD + ML: post
+- Code: [Github](https://github.com/snagcliffs/PDE-FIND)
 
 H. **Schaefer**: [Learning partial differential equations via data discovery and sparse optimization (2017)](https://royalsocietypublishing.org/doi/10.1098/rspa.2016.0446)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
+- Aim: develop a learning algorithm to identify the terms in the underlying partial differential equations and to approximate the coefficients of the terms only using data
+- Learning type: supervised learning (regression)
+- ML algorithms: LASSO
+- ML frameworks: not specified
+- CFD framework: not specified
 - Combination of CFD + ML:
 
 M. **Schmelzer** et al.: [Machine Learning of Algebraic Stress Models using Deterministic Symbolic Regression (2019)](https://www.researchgate.net/publication/333236696_Machine_Learning_of_Algebraic_Stress_Models_using_Deterministic_Symbolic_Regression)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: use deterministic symbolic regression to infer algebraic stress models for the closure of RANS equations directly from high-fidelity LES or DNS data;
+- Learning type: supervised learning (regression)
+- ML algorithms: elastic net
+- ML frameworks: not specified
+- CFD framework: OpenFOAM
+- Combination of CFD + ML: post
 
 N. **Shah** et al.: [Prediction of Autoignition and Flame Properties for Multicomponent Fuels Using Machine Learning Techniques (2019)](https://www.researchgate.net/publication/331966092_Prediction_of_Autoignition_and_Flame_Properties_for_Multicomponent_Fuels_Using_Machine_Learning_Techniques)
 - Aim: use RFs and MLPs to predict ignition delay times, flame speeds, octane ratings and CA50 values in homogeneous charge compression ignition engine for multicomponent gasoline surrogates
@@ -534,28 +538,29 @@ N. **Shah** et al.: [Prediction of Autoignition and Flame Properties for Multico
 - Combination of CFD + ML: post
 
 Y. B. **Sinai** et al.: [Learning data-driven discretizations for partial differential equations (2019)](https://www.pnas.org/content/116/31/15344)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: introduce data-driven discretization, a method for learning optimized approximations to PDEs based on actual solutions to the known underlying equations; use neural networks to estimate spatial derivatives, which are optimized end to end to best satisfy the equations on a low-resolution grid
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: Tensorflow
+- CFD framework: inhouse
+- Combination of CFD + ML: interactively
+- Code: [Github](https://github.com/google/data-driven-discretization-1d)
 
 A. P. **Singh** et al.: [Machine-Learning-Augmented Predictive Modeling of Turbulent Separated Flows over Airfoils  (2017)](https://arc.aiaa.org/doi/pdf/10.2514/1.J055595)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: apply inverse modeling to infer the spatial distribution of model discrepancies, and, machine learning to reconstruct discrepancy information from a large number of inverse problems into corrective model forms; reconstruct model forms using neural networks and embedded model within a standard solver
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: FANN
+- CFD framework: ADTURNS
+- Combination of CFD + ML: post, interactively
 
 A. P. **Singh** et al.: [Characterizing and Improving Predictive Accuracy in Shock-Turbulent Boundary Layer Interactions Using Data-driven Models (2017)](https://arc.aiaa.org/doi/abs/10.2514/6.2017-0314)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: apply data-driven solution to enhance RANS predictions of flows involving shock-boundary layer interactions; solve inverse problems to infer spatial discrepancies in the Spalart Allmaras model and project these discrepancies to locally non-dimensional flow features
+- Learning type: supervised learning (regression)
+- ML algorithms: Adaboost
+- ML frameworks: scikit learn
+- CFD framework: database, not specified
+- Combination of CFD + ML: post, interactively
 
 C. M. **Stroefer** et al.: [Data-Driven, Physics-Based Feature Extraction from Fluid Flow Fields (2018)](https://arxiv.org/abs/1802.00775)
 - Aim: present a physics-based, data-driven method capable of identifying any flow feature it is trained to; identify any type of feature, even distinguish between similar ones, without the need to explicitly define the physics
