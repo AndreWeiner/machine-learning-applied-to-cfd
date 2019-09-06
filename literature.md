@@ -446,7 +446,7 @@ J. **Rabault** et al.: [Accelerating Deep Reinforcement Leaning strategies of Fl
 - CFD framework: Fenics
 - Combination of CFD + ML: interactively
 
-M. **Raissi** et al.: [Hidden physics models: Machine learning of nonlinear partial differential equations (2018)](https://www.sciencedirect.com/science/article/pii/S0021999118307125)
+M. **Raissi** et al.: [Hidden physics models: Machine learning of nonlinear partial differential equations (2018)](https://www.sciencedirect.com/science/article/pii/S0021999117309014)
 - Aim: present a new paradigm of learning partial differential equations from small data; extract patterns from high-dimensional data generated from experiments
 - Learning type: supervised learning (regression)
 - ML algorithms: GP
