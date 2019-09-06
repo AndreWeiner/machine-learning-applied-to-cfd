@@ -398,28 +398,28 @@ T. **Murata** et al.: [Nonlinear mode decomposition with machine learning for fl
 - Combination of CFD + ML: post
 
 G. **Novati** et al.: [Synchronisation through learning for two self-propelled swimmers (2017)](https://iopscience.iop.org/article/10.1088/1748-3190/aa6311)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: conduct simulations of two, self-propelled, fish-like bodies that employ a learning algorithm to synchronise their swimming patterns; demonstrate that two rigid bodies executing pre-specified motions, with an alternating leader and follower, can result in substantial drag-reduction and intermittent thrust generation
+- Learning type: reinforcement learning
+- ML algorithms: not specified
+- ML frameworks: not specified
+- CFD framework: not specified
+- Combination of CFD + ML: interactively
 
 E. J. **Parish** et al.: [A paradigm for data-driven predictive modeling using field inversion and machine learning (2016)](https://www.sciencedirect.com/science/article/pii/S0021999115007524?via%3Dihub)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: propose a modeling paradigm that seeks to comprehensively harness data from sources such as high-fidelity simulations and experiments to aid the creation of improved closure models for computational physics applications; use inverse modeling to obtain corrective, spatially distributed functional terms
+- Learning type: supervised learning (regression)
+- ML algorithms: GP
+- ML frameworks: not specified
+- CFD framework: not specified
+- Combination of CFD + ML: post
 
 S. **Pierret** et al.: [Turbomachinery Blade Design Using a Navier–Stokes Solver and Artificial Neural Network (1999)](https://asmedigitalcollection.asme.org/turbomachinery/article-abstract/121/2/326/418791/Turbomachinery-Blade-Design-Using-a-Navier-Stokes?redirectedFrom=fulltext)
-- Aim:
-- Learning type:
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- Aim: describe a knowledge-based method for the automated design of more efficient turbine blades; optimize shape parameters based on simulated annealing and neural networks; use neural networks to learn Mach number distribution on wing surface
+- Learning type: supervised learning (regression)
+- ML algorithms: MLP
+- ML frameworks: not specified
+- CFD framework: TRAF2D
+- Combination of CFD + ML: post
 
 Y. **Qi** et al.: [Computing curvature for volume of fluid methods using machine learning (2019)](https://www.sciencedirect.com/science/article/pii/S0021999118307046?via%3Dihub)
 - Aim: create data set with volume fractions and corresponding curvature for well-defined shapes, and use machine learning to fit the data; test model on shapes not used for training and in an interface capturing solver
@@ -430,20 +430,21 @@ Y. **Qi** et al.: [Computing curvature for volume of fluid methods using machine
 - Combination of CFD + ML: interactively
 
 J. **Rabault** et al.: [Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control (2019)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/artificial-neural-networks-trained-through-deep-reinforcement-learning-discover-control-strategies-for-active-flow-control/D5B80D809DFFD73760989A07F5E11039)
-- Aim:
+- Aim: application of an artificial neural network trained through a deep reinforcement learning agent to perform active flow control for the flow around a cylinder
 - Learning type: reinforcement learning
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- ML algorithms: MLP
+- ML frameworks: Tensorflow, Tensorforce
+- CFD framework: Fenics
+- Combination of CFD + ML: interactively
+- Code: [Github](https://github.com/jerabaul29/Cylinder2DFlowControlDRL)
 
 J. **Rabault** et al.: [Accelerating Deep Reinforcement Leaning strategies of Flow Control through a multi-environment approach (2019)](https://www.researchgate.net/publication/333995531_Accelerating_Deep_Reinforcement_Leaning_strategies_of_Flow_Control_through_a_multi-environment_approach)
-- Aim:
+- Aim: introduce a simple strategy is to use several independent simulations running in parallel to collect the required experiences for reinforcement learning faster
 - Learning type: reinforcement learning
-- ML algorithms:
-- ML frameworks:
-- CFD framework:
-- Combination of CFD + ML:
+- ML algorithms: MLP
+- ML frameworks: Tensorflow, Tensorforce
+- CFD framework: Fenics
+- Combination of CFD + ML: interactively
 
 M. **Raissi** et al.: [Hidden physics models: Machine learning of nonlinear partial differential equations (2018)](https://www.sciencedirect.com/science/article/pii/S0021999118307125)
 - Aim: present a new paradigm of learning partial differential equations from small data; extract patterns from high-dimensional data generated from experiments
