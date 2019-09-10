@@ -413,6 +413,13 @@ E. J. **Parish** et al.: [A paradigm for data-driven predictive modeling using f
 - CFD framework: not specified
 - Combination of CFD + ML: post
 
+H. V. **Patel** et al.: [Computing interface curvature from volume fractions: A machine learning approach (2019)](https://www.sciencedirect.com/science/article/abs/pii/S0045793019302282)
+- Aim: develop a model which predicts the local interface curvature from neighbouring volume fractions; introduce data generation methodology is devised which generates well-balanced randomized data sets comprising of spherical interface patches of different configurations/orientations
+- ML algorithms: MLP
+- ML frameworks: Matlab
+- CFD framework: inhouse
+- Combination of CFD + ML: interactively
+
 S. **Pierret** et al.: [Turbomachinery Blade Design Using a Navier–Stokes Solver and Artificial Neural Network (1999)](https://asmedigitalcollection.asme.org/turbomachinery/article-abstract/121/2/326/418791/Turbomachinery-Blade-Design-Using-a-Navier-Stokes?redirectedFrom=fulltext)
 - Aim: describe a knowledge-based method for the automated design of more efficient turbine blades; optimize shape parameters based on simulated annealing and neural networks; use neural networks to learn Mach number distribution on wing surface
 - Learning type: supervised learning (regression)
