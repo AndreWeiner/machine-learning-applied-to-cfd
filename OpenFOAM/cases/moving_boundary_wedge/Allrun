@@ -1,0 +1,45 @@
+#!/bin/sh
+cd ${0%/*} || exit 1                        # Run from this directory
+. $WM_PROJECT_DIR/bin/tools/RunFunctions    # run functions
+
+mkdir -p constant/triSurface
+./Allclean
+
+# Create a 2D wedge mesh of an axis-symmetric bubble using snappyHexMesh
+
+## Prepare STL file
+baseGeometry="/home/test_cases/geometries/water_01_l16.stl"
+derivedGeometry="constant/triSurface/water_01_l16"
+
+runApplication surfaceTransformPoints -translate '(0 0 -0.05)' $baseGeometry ${derivedGeometry}_right.stl
+mv log.surfaceTransformPoints log.surfaceTransformPoints.translate
+runApplication surfaceTransformPoints -rotate-angle '((0 1 0) 180)' ${derivedGeometry}_right.stl ${derivedGeometry}_left.stl
+mv log.surfaceTransformPoints log.surfaceTransformPoints.rotate
+runApplication surfaceAdd -mergeRegions ${derivedGeometry}_right.stl ${derivedGeometry}_left.stl ${derivedGeometry}_full.stl
+rm ${derivedGeometry}_right.stl ${derivedGeometry}_left.stl
+runApplication surfaceTransformPoints -translate '(0 0 0.025)'  ${derivedGeometry}_full.stl ${derivedGeometry}_full.stl
+
+
+## Create background mesh with blockMesh
+runApplication blockMesh
+
+
+## Create 3D mesh with snappyHexMesh
+### Run snappyHexMesh
+runApplication snappyHexMesh -overwrite
+### Extrude upper patch to create a wedge
+runApplication topoSet -dict system/topoSetDict.extrude
+mv log.topoSet log.topoSet.extrude
+runApplication createPatch -overwrite -dict system/createPatchDict.extrude
+mv log.createPatch log.createPatch.extrude
+runApplication extrudeMesh
+runApplication collapseEdges -overwrite -collapseFaces
+runApplication createPatch -overwrite -dict system/createPatchDict.rename
+mv log.createPatch log.createPatch.rename
+
+## run mesh motion
+#runApplication moveDynamicMesh
+
+touch post.foam
+
+#------------------------------------------------------------------------------

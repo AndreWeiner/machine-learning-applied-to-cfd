@@ -1,0 +1,78 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// varibles to define the background mesh
+outerRad 5.0;
+negOuterRad -5.0;
+blocksX 200;
+blocksY 200;
+thickness #calc "2 * $outerRad / $blocksX";
+
+scale   1;
+
+vertices
+(
+    ($negOuterRad $negOuterRad 0.0)         // 0
+    ($outerRad    $negOuterRad 0.0)         // 1
+    ($outerRad    $outerRad    0.0)         // 2
+    ($negOuterRad $outerRad    0.0)         // 3
+    ($negOuterRad $negOuterRad $thickness)  // 4
+    ($outerRad    $negOuterRad $thickness)  // 5
+    ($outerRad    $outerRad    $thickness)  // 6
+    ($negOuterRad $outerRad    $thickness)  // 7
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) ($blocksX $blocksY 1) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    back
+    {
+        type patch;
+        faces
+        (
+            (0 1 2 3)
+        );
+    }
+    front
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+    outerDomain
+    {
+        type patch;
+        faces
+        (
+            (0 1 5 4)
+            (3 7 6 2)
+            (2 6 5 1)
+            (0 4 7 3)
+        );
+    }
+);
+
+// ************************************************************************* //

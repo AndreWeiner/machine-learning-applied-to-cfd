@@ -10,15 +10,24 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Substitute String:
+$
+
 # Command Line History (newest to oldest):
 :wq
-|2,0,1563464006,,"wq"
+|2,0,1573746264,,"wq"
 :q
-|2,0,1563463259,,"q"
+|2,0,1573745580,,"q"
+:b1
+|2,0,1573745436,,"b1"
+:b2
+|2,0,1573745427,,"b2"
 :Wq
 |2,0,1563462558,,"Wq"
 
 # Search String History (newest to oldest):
+? @$
+|2,1,1573745473,,"@$"
 
 # Expression History (newest to oldest):
 
@@ -27,254 +36,314 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
+""0	CHAR	0
+	   wedge_front
+	   {
+	        type            wedge;
+	   }
+|3,1,0,0,4,0,1573745648,"   wedge_front","   {","        type            wedge;","   }"
 "1	LINE	0
-	. $WM_PROJECT_DIR/bin/tools/CleanFunctions    # Tutorial run functions
-|3,0,1,1,1,0,1563462344,". $WM_PROJECT_DIR/bin/tools/CleanFunctions    # Tutorial run functions"
-"2	LINE	0
 	
-	
-|3,0,2,1,2,0,1563462250,"",""
+|3,0,1,1,1,0,1573745442,""
+"2	CHAR	0
+	        type triSurfaceMesh;
+	        file "water_01_l16_full.stl";
+|3,0,2,0,2,0,1573745266,"        type triSurfaceMesh;","        file \"water_01_l16_full.stl\";"
 "3	LINE	0
+	. $WM_PROJECT_DIR/bin/tools/CleanFunctions    # Tutorial run functions
+|3,0,3,1,1,0,1563462344,". $WM_PROJECT_DIR/bin/tools/CleanFunctions    # Tutorial run functions"
+"4	LINE	0
+	
+	
+|3,0,4,1,2,0,1563462250,"",""
+"5	LINE	0
 	runApplication blockMesh
-|3,0,3,1,1,0,1563462248,"runApplication blockMesh"
-""-	CHAR	0
+|3,0,5,1,1,0,1563462248,"runApplication blockMesh"
+"-	CHAR	0
 	0
-|3,1,36,0,1,0,1563463337,"0"
+|3,0,36,0,1,0,1563463337,"0"
 
 # File marks:
-'0  30  20  /home/cases/moving_boundary/system/controlDict
-|4,48,30,20,1563464006,"/home/cases/moving_boundary/system/controlDict"
-'1  27  21  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,49,27,21,1563463988,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'2  27  25  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,50,27,25,1563463957,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'3  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,51,28,29,1563463919,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'4  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,52,28,29,1563463919,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'5  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,53,28,29,1563463919,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'6  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,54,28,29,1563463919,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'7  28  23  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,55,28,23,1563463852,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'8  28  23  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,56,28,23,1563463852,"/home/cases/moving_boundary/constant/dynamicMeshDict"
-'9  28  23  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,57,28,23,1563463852,"/home/cases/moving_boundary/constant/dynamicMeshDict"
+'0  24  0  /home/cases/moving_boundary_wedge/constant/dynamicMeshDict
+|4,48,24,0,1573746264,"/home/cases/moving_boundary_wedge/constant/dynamicMeshDict"
+'1  40  12  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,49,40,12,1573745657,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+'2  244800  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,50,244800,0,1573745580,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+'3  44  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,51,44,2,1573745518,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+'4  35  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,52,35,2,1573745518,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+'5  8  0  /home/cases/moving_boundary_wedge/0
+|4,53,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+'6  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,54,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+'7  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,55,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+'8  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,56,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+'9  30  4  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,57,30,4,1573745409,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
 
 # Jumplist (newest first):
--'  30  20  /home/cases/moving_boundary/system/controlDict
-|4,39,30,20,1563464006,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463998,"/home/cases/moving_boundary/system/controlDict"
--'  27  21  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,21,1563463988,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  21  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,21,1563463988,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  25  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,25,1563463957,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  25  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,25,1563463957,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,29,1563463946,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,29,1563463946,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,29,1563463946,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,29,1563463946,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,29,1563463919,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  29  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,29,1563463919,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  23  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,23,1563463852,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  23  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,23,1563463852,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  18  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,18,1563463769,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  28  18  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,28,18,1563463769,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463736,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463736,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463736,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463736,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463736,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463736,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463705,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  27  43  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,27,43,1563463705,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463690,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463612,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  26  24  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,26,24,1563463612,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  1  0  /home/cases/moving_boundary/constant/dynamicMeshDict
-|4,39,1,0,1563463603,"/home/cases/moving_boundary/constant/dynamicMeshDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
--'  34  17  /home/cases/moving_boundary/system/controlDict
-|4,39,34,17,1563463338,"/home/cases/moving_boundary/system/controlDict"
+-'  24  0  /home/cases/moving_boundary_wedge/constant/dynamicMeshDict
+|4,39,24,0,1573746264,"/home/cases/moving_boundary_wedge/constant/dynamicMeshDict"
+-'  1  0  /home/cases/moving_boundary_wedge/constant/dynamicMeshDict
+|4,39,1,0,1573746246,"/home/cases/moving_boundary_wedge/constant/dynamicMeshDict"
+-'  40  12  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,40,12,1573745657,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  40  12  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,40,12,1573745657,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  44  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,44,2,1573745591,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  44  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,44,2,1573745591,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  244800  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244800,0,1573745580,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244800  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244800,0,1573745580,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244800  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244800,0,1573745580,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244800  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244800,0,1573745580,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745544,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745544,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745544,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745544,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  35  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,35,2,1573745518,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  35  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,35,2,1573745518,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  35  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,35,2,1573745518,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  35  2  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,35,2,1573745518,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  30  4  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,30,4,1573745481,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  30  4  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,30,4,1573745481,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  30  4  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,30,4,1573745481,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  30  4  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,30,4,1573745481,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  30  4  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,30,4,1573745481,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  30  4  /home/cases/moving_boundary_wedge/0/pointDisplacement
+|4,39,30,4,1573745481,"/home/cases/moving_boundary_wedge/0/pointDisplacement"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  8  0  /home/cases/moving_boundary_wedge/0
+|4,39,8,0,1573745476,"/home/cases/moving_boundary_wedge/0"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  244792  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,244792,0,1573745467,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  1  0  /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+|4,39,1,0,1573745461,"/home/cases/moving_boundary_wedge/log.moveDynamicMesh"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
+-'  18  0  /home/cases/moving_boundary_wedge/system/controlDict
+|4,39,18,0,1573745444,"/home/cases/moving_boundary_wedge/system/controlDict"
 
 # History of marks within files (newest to oldest):
 
+> /home/cases/moving_boundary_wedge/constant/dynamicMeshDict
+	*	1573746261	0
+	"	24	0
+	^	24	0
+	.	24	0
+	+	27	46
+	+	23	1
+	+	24	0
+
+> /home/cases/moving_boundary_wedge/0/pointDisplacement
+	*	1573745656	0
+	"	40	12
+	^	40	13
+	.	40	12
+	+	32	4
+	+	35	2
+	+	33	30
+	+	44	2
+	+	33	35
+	+	34	39
+	+	37	4
+	+	39	2
+	+	38	29
+	+	40	12
+
+> /home/cases/moving_boundary_wedge/log.moveDynamicMesh
+	*	1573745557	0
+	"	244800	0
+
+> /home/cases/moving_boundary_wedge/system/controlDict
+	*	1573745443	0
+	"	18	0
+	^	17	0
+	.	18	0
+	+	18	0
+	+	16	0
+	+	17	0
+	+	18	0
+
 > /home/cases/moving_boundary/system/controlDict
-	*	1563464005	0
-	"	30	20
+	*	1573745433	0
+	"	18	0
 	^	30	21
 	.	30	20
 	+	30	19
 	+	34	17
 	+	30	20
+
+> /home/cases/moving_boundary_wedge/system/snappyHexMeshDict
+	*	1573745277	0
+	"	36	17
+	^	36	18
+	.	36	17
+	+	33	0
+	+	36	17
 
 > /home/cases/moving_boundary/constant/dynamicMeshDict
 	*	1563463986	0

@@ -1,0 +1,70 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// The topoSetDict comprises a list of actions to perform on different
+// set types (cellSet, faceSet, pointSet, etc).
+//
+// Each action is a dictionary with e.g.
+//     // Name of set
+//     name    c0;
+//
+//     // type: pointSet/faceSet/cellSet/faceZoneSet/cellZoneSet
+//     type    cellSet;
+//
+//     // action to perform on set. Two types:
+//     // - require no source : clear/invert/remove
+//     //       clear  : clears set or zone
+//     //       invert : select all currently non-selected elements
+//     //       remove : removes set or zone
+//     // - require source    : new/add/subtract/subset
+//     //       new    : create new set or zone from source
+//     //       add    : add source to contents
+//     //       subtract : subtract source from contents
+//     //       subset : keeps elements both in contents and source
+//     action  new;
+//
+// The source entry varies according to the type of set.
+//
+// In OpenFOAM 1806 and earlier, it was compulsory to use a 'sourceInfo'
+// sub-dictionary to define the sources.
+// In OpenFOAM 1812 and later, this sub-directory is optional, unless
+// there would be a name clash (Eg, 'type' or 'name' appearing at both levels).
+// In most cases, the source definitions have been adjusted to avoid such
+// clashes.
+//
+// More detailed listing in the annotated topoSetSourcesDict
+
+actions
+(
+    {
+        name    centerFaces;
+        type    faceSet;
+        action  new;
+        source  patchToFace;
+        patch   wedge_back;
+
+    }
+    {
+        name    centerFaces;
+        type    faceSet;
+        action  subtract;
+        source  normalToFace;
+        normal  (0 0 -1);        // Vector
+        cos     1.0E-12;           // Tolerance (max cos of angle)
+    }
+);
+
+// ************************************************************************* //

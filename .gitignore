@@ -8,3 +8,5 @@ lnInclude
 __pycache__
 andre
 !/OpenFOAM/**/*.pt
+.vim*
+*weiner*
