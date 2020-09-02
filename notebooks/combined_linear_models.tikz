@@ -1,8 +1,8 @@
-\tikzset{%
+﻿\tikzset{%
   every neuron/.style={
     circle,
     draw,
-    minimum size=1cm
+    minimum size=1.2cm
   },
   neuron missing/.style={
     draw=none, 
@@ -12,21 +12,23 @@
   },
   sig/.style={path picture= {
     \begin{scope}[x=1pt,y=10pt]
-      \draw plot[domain=-6:6] (\x,{1/(1 + exp(-\x))-0.5});
+      \node (bla) at (-7,0) {$\sum|$};
+      \draw plot[domain=-6:6] (\x + 7 ,{1/(1 + exp(-\x ))-0.5});
     \end{scope}
     }
   }
 }
+\begin{tikzpicture}
 
-\node [every neuron/.try, neuron 1/.try] (input-1) at (0,2.5-1) {$x_1$};
-\node [every neuron/.try, neuron 2/.try] (input-2) at (0,2.5-2) {$x_2$};
-\node [every neuron/.try, neuron 3/.try] (input-3) at (0,2.5-3) {$1$};
+\node [every neuron/.try, neuron 1/.try] (input-1) at (0,2.5-1) {$Ga^\prime$};
+\node [every neuron/.try, neuron 2/.try] (input-2) at (0,2.5-2.5) {$Eo^\prime$};
+\node [every neuron/.try, neuron 3/.try] (input-3) at (0,2.5-4) {$1$};
 
-\node [every neuron/.try, neuron 1/.try, sig ] (hidden-1) at (2,2.5-1) {};
-\node [every neuron/.try, neuron 2/.try, sig ] (hidden-2) at (2,2.5-2) {};
-\node [every neuron/.try, neuron 3/.try] (hidden-3) at (2,2.5-3) {$1$};
+\node [every neuron/.try, neuron 1/.try, sig ] (hidden-1) at (3,2.5-1) {};
+\node [every neuron/.try, neuron 2/.try, sig ] (hidden-2) at (3,2.5-2.5) {};
+\node [every neuron/.try, neuron 3/.try] (hidden-3) at (3,2.5-4) {$1$};
 
-\node [every neuron/.try, neuron 1/.try, sig ] (output-1) at (4,1.5-1) {};
+\node [every neuron/.try, neuron 1/.try, sig ] (output-1) at (6,1.5-1.5) {};
 
 \foreach \i in {1,2,3}
   \foreach \j in {1,2}
@@ -37,4 +39,6 @@
     \draw [->] (hidden-\i) -- (output-\j);
 
 \foreach \l [count=\x from 0] in {Input, Hidden, Ouput}
-  \node [align=center, above] at (\x*2,2) {\l \\ layer};
+  \node [align=center, above] at (\x*3,2) {\l \\ layer};
+
+\end{tikzpicture}
