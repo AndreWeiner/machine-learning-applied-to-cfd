@@ -1,5 +1,7 @@
 # machine-learning-applied-to-cfd
 
+**Important note:** the code in this repository is mostly outdated. To find actively maintained and updated code examples covering a large range of applications, refer to the [ml-cfd-lecture](https://github.com/AndreWeiner/ml-cfd-lecture) repository.
+
 ## Outline
 
 1. [Introduction](#introduction)
